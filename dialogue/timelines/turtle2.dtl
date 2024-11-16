@@ -1,0 +1,24 @@
+[background fade="0.0"]
+[style name="dialogue_style"]
+join turtle center
+join fox left
+
+fox: [color=#A8A8A8](cheerful)[/color] Howdy, Shelly. What have you been up to recently?
+
+turtle: [color=#A8A8A8](gushing)[/color] Not much. Just spending time with my handsome and manly boyfriend. Fox, the way he kisses me and I'm under him, it's just all so --
+
+fox: [color=#A8A8A8](panicking)[/color] No no, no need to give me so much information, Shelly. I'm sure this Casanova is a lovely fella.
+
+turtle: [color=#A8A8A8](laughing)[/color] Ok ok, I won't tease you anymore. I have a feeling that we are going to get married before the year ends. I just need to convince him to drop off some baggage.
+
+- Baggage?
+	fox: [color=#A8A8A8](curious)[/color] Baggage? What do you mean?
+- Huh?
+	fox: [color=#A8A8A8](puzzled)[/color] Huh?
+
+turtle: [color=#A8A8A8](nodding)[/color] Yes, I am doing him a favor. Rid him of the burden and everything. I need to go and talk to him again. Bye bye, Fox.
+
+fox: Goodbye, Shelly. Good luck at whatever you are doing!
+
+leave turtle
+leave fox

@@ -1,0 +1,22 @@
+# For the Bonnie Encounter 4 to occur, Shelly the Turtle Encounter 3 must have happened in the timeline already. 
+[background fade="0.0"]
+[style name="dialogue_style"]
+join bunny center
+join fox left
+
+fox: [color=#A8A8A8](cheerful)[/color] Howdy, Bonnie. How have things been?
+
+bunny: [color=#A8A8A8](thankful)[/color] Great! My husband and that turtle girl are [color=darkred]no longer a problem[/color]! Thanks for your previous advice, Fox!
+
+fox: [color=#A8A8A8](smiling)[/color] I'm so glad the problem is resolved. How are the kids?
+
+bunny: [color=#A8A8A8](smiling)[/color] The kids are doing better. I think that they are happy with food being back on the table finally. I had a lucky encounter and discovered a lot of food recently...
+
+fox: That is great to hear. It's a small community. Let me know if there is a way I can help in any way.
+
+bunny: I'm actually looking for a job at a moment to pay the bills and all. Let me know if you hear about any place hiring.
+
+fox: Of course. I'll let you know as soon as possible.
+
+leave bunny
+leave fox

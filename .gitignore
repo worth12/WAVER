@@ -1,8 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
-<<<<<<< HEAD
+
 /android/
-=======
 
 # Godot-specific ignores
 .import/
@@ -16,4 +15,9 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
->>>>>>> 259c10e2010fc6069bd2391c8831801c32c5a93b
+
+# IntelliJ / Rider
+/.idea
+
+#macOS
+.DS_Store

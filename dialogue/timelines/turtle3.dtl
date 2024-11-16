@@ -1,0 +1,26 @@
+# For the Bonnie Encounter 4 to occur, Shelly the Turtle Encounter 3 must have happened in the timeline already. 
+
+[background fade="0.0"]
+[style name="dialogue_style"]
+join turtle center
+join fox left
+
+fox: [color=#A8A8A8](joking)[/color] Howdy, Shelly. Did you convince that Casanova of yours to drop off his baggage yet?
+
+turtle: [color=#A8A8A8](nodding happily)[/color] He finally gave in, Fox. He promised me he will leave his wife.
+
+- He's married?!
+	fox: [color=#A8A8A8](shocked)[/color] What? Wife? He's a married man?
+- ???
+ 	fox: [color=#A8A8A8](stunned)[/color] ???
+
+turtle: [color=#A8A8A8](smiling and showing off a ring on her finger)[/color] He got me this and all. We going to start a family together, Fox.
+
+fox: [color=#A8A8A8](mumbling)[/color] I don't know about this, Shelly. This isn't right.
+
+turtle: [color=#A8A8A8](amused)[/color] Who cares, life is short. Happiness is something people are willing to die for, no? See you soon, Fox. I will be a married woman the next time you see me.
+
+fox: ...
+
+leave turtle
+leave fox

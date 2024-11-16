@@ -1,0 +1,91 @@
+[background fade="0.0"]
+join cat center
+join fox left
+
+cat: [color=#A8A8A8](adjusts tiny tie with paw)[/color] Good morning. I require your most precise latte artistry today.
+
+- Confident in latte art skills
+	fox: [color=#A8A8A8](nods confidently)[/color] I've been practicing my technique.
+	[color=#A8A8A8](You make a perfectly shaped fish in the foam.)[/color]
+	cat: [color=#A8A8A8](pleased)[/color] I see you've been practicing. Excellent initiative.
+- Nervous about latte art
+	fox: [color=#A8A8A8](looking uncertain)[/color] I'll... do my best.
+	[color=#A8A8A8](Your attempt at a fish looks more like a blob.)[/color]
+	cat: [color=#A8A8A8](annoyed, places tiny briefcase on counter)[/color] We... may need to work on your technique.
+
+# [background_sound] muffled_explosion
+[color=#A8A8A8](A muffled explosion sounds from somewhere nearby. Several customers look up in concern.)[/color]
+
+cat: Did you hear something? No matter. Focus is essential in coffee craftsmanship.
+
+- Ask about her presentation
+	fox: What's the occasion for the perfect latte?
+	cat: [color=#A8A8A8](pulls out PowerPoint printouts)[/color] The annual Fish Market Futures report. Everything depends on the perfect latte art presentation.
+	[color=#A8A8A8](Someone runs past the window on fire, but Mittens doesn't seem to notice.)[/color]
+	cat: [color=#A8A8A8](glances at window)[/color] Tsk. Some people have no sense of proper business district decorum.
+- Comment on the explosion
+	fox: Shouldn't we be concerned about that explosion?
+	cat: Ah yes, the ambient soundscape is rather dynamic today. However, let's maintain our attention on achieving the optimal fish-to-foam ratio.
+
+cat: [color=#A8A8A8](serious)[/color] Now then. There are exactly three components to the perfect latte fish...
+
+# [background_animation] masked_figure_sneaking
+[color=#A8A8A8](A masked figure sneaks past the window. Evil laughter echoes from somewhere nearby.)[/color]
+
+cat: [color=#A8A8A8](pulls out laser pointer)[/color] Let me demonstrate the proper swirl technique.
+
+- Try to make a simple fish
+	fox: I'll try something basic first.
+	cat: [color=#A8A8A8](adjusts glasses)[/color] Hmm... the tail-to-body proportion is concerning. Perhaps we should consult my spreadsheet.
+- Attempt a complex design
+	fox: [color=#A8A8A8](attempting an elaborate design)[/color] How about something more artistic?
+	cat: Ambitious! But in business, we must walk before we can swim. [color=#A8A8A8](pulls out protractor)[/color]
+- Point out the suspicious activity
+	fox: Mittens, did you see that masked person outside?
+	cat: [color=#A8A8A8](waves paw dismissively)[/color] The only suspicious activity I see is this foam distribution. We're losing valuable microstructure integrity!
+
+# [background_animation] smoke_rising
+[color=#A8A8A8](Smoke begins rising outside. Sirens can be heard approaching.)[/color]
+
+cat: [color=#A8A8A8](focused)[/color] Now, observe carefully. The key to proper fish latte art is in the... [color=#A8A8A8](dramatic)[/color] wrist control.
+
+- Follow her instructions exactly
+	fox: [color=#A8A8A8](carefully following directions)[/color] Like this?
+	cat: [color=#A8A8A8](purrs professionally)[/color] Yes! You're beginning to understand the methodology.
+- Try to warn her about danger
+	fox: Mittens, I really think we should be concerned about what's happening outside...
+	cat: [color=#A8A8A8](sighs)[/color] Another coffee shop falling prey to distractions. This is why we're 47th in global coffee rankings.
+- Ask about her real motivation
+	fox: Is this really about latte art, Mittens?
+	cat: [color=#A8A8A8](straightens tie)[/color] Between us... I heard the board members are cat people. But that's irrelevant to proper latte technique.
+
+# [background_animation] villain_confrontation
+[color=#A8A8A8](A dramatic confrontation breaks out between masked figures and authorities just outside.)[/color]
+
+cat: [color=#A8A8A8](completely focused on coffee)[/color] A little more angle on the fin... careful now...
+
+[color=#A8A8A8](Mittens gets distracted by a sunbeam, spinning around and accidentally knocking over several would-be villains who were sneaking in.)[/color]
+
+cat: [color=#A8A8A8](professional)[/color] Ah... perhaps we should document this as a "planned demonstration of improper handling techniques."
+
+cat: [color=#A8A8A8](satisfied)[/color] Well! Despite some minor atmospheric disruptions, I believe we've made excellent progress.
+cat: [color=#A8A8A8](pulls out tiny business card)[/color] Here's my card. I've noted your latte art improvement metrics on the back.
+
+[color=#A8A8A8](Several suspicious characters lie unconscious on the floor, tripped by Mittens' accidental intervention.)[/color]
+
+cat: [color=#A8A8A8](innocent)[/color] Oh, and do tell those napping gentlemen on the floor that proper coffee shop etiquette suggests not sleeping in the serving area.
+
+- Thank her for the lesson
+	fox: Thank you for the detailed lesson, Mittens.
+	cat: [color=#A8A8A8](pleased, grooming paw)[/color] Professional development is its own reward.
+- Ask if she noticed anything unusual
+	fox: Did you notice anything... unusual about today's lesson?
+	cat: Only that your steam wand technique needs a 12.3% adjustment for optimal results.
+- Mention she saved the day
+	fox: You know you just stopped those criminals, right?
+	cat: [color=#A8A8A8](confused, checks watch)[/color] Stopped? Oh my, is it that late? I have a 2:30 meeting about optimal scratching post placement in the office.
+
+cat: Same time next week for our advanced fish-rendering seminar? [color=#A8A8A8](straightens tie one last time)[/color]
+
+leave cat
+leave fox
