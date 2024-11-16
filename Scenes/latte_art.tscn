@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://df1flad2eitct"]
 
-[ext_resource type="Script" path="res://Scenes/latte_art/latte_art.gd" id="1_e3hmb"]
+[ext_resource type="Script" path="res://Scripts/latte_art.gd" id="1_e3hmb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
 bg_color = Color(0.95, 0.95, 0.95, 1)
@@ -23,13 +23,13 @@ radius = 210.0
 script = ExtResource("1_e3hmb")
 
 [node name="Background" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 950.0
+offset_bottom = 519.0
 color = Color(0.658824, 0.521569, 0.415686, 1)
 
 [node name="CupArea" type="Node2D" parent="."]
 clip_children = 1
-position = Vector2(576, 324)
+position = Vector2(466, 227)
 
 [node name="CupRim" type="Panel" parent="CupArea"]
 anchors_preset = 8
@@ -94,10 +94,10 @@ theme_override_font_sizes/font_size = 24
 text = "Score: 0"
 
 [node name="TimeLabel" type="Label" parent="."]
-offset_left = 960.0
-offset_top = 32.0
-offset_right = 1120.0
-offset_bottom = 64.0
+offset_left = 776.0
+offset_top = 21.0
+offset_right = 936.0
+offset_bottom = 55.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Time: 30"
@@ -108,15 +108,18 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 326.0
-offset_top = 548.0
-offset_right = 826.0
-offset_bottom = 580.0
+offset_left = 212.0
+offset_top = 464.0
+offset_right = 712.0
+offset_bottom = 498.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Trace the pattern to create latte art!"
 horizontal_alignment = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(947, 518)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
