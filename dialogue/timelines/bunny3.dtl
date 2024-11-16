@@ -1,0 +1,19 @@
+[background fade="0.0"]
+[style name="dialogue_style"]
+join bunny center
+fox: Howdy, Mrs. Bunny, How’s the situation with your husband coming along?
+bunny: I can’t take it anymore. I just found out he got fired from his job. Apparently, he has been
+bunny: having an affair for the past months with his secretary.
+- That's awful!
+	fox: That is awful Mrs. Bunny.
+- Damn.
+	fox: Damn.
+bunny: I don’t know what to do, Mr. Fox. Money was already tight before and I got two hundred and seventeen mouths to take care of. My kids and I haven’t eaten in days.
+fox: The economy is rough right now. Do you need anything?
+bunny: I don’t think I can ever forgive my husband. Tell me what to do, Mr. Fox.
+- Follow your heart
+	fox: Whenever I am in a tough position, I always remember a piece of advice my mother gave me. Do what the heart says.
+- Do what needs to be done.
+	fox: Do whatever needs to be done, Mrs. Bunny.
+bunny: I see… it all makes sense now. Thank you, Mr. Fox.
+leave bunny

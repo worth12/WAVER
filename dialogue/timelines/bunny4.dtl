@@ -1,0 +1,13 @@
+[background fade="0.0"]
+[style name="dialogue_style"]
+join bunny center
+
+fox: Howdy, Mrs. Bunny. How have things been?
+bunny: Great! My husband and that turtle girl are no longer a problem!
+fox: I'm so glad the problem is resolved. How are the kids?
+bunny: The kids are doing better. I think that they are happy with food being back on the table finally. I had a lucky encounter and discovered a lot of food recently...
+fox: That is great to hear. It's a small community. Let me know if there is a way I can help in any way.
+bunny: I'm looking for a job. Let me know if you hear anything, Mr. Fox.
+fox: Of course. I'll let you know if I find anything suitable for you, Mrs. Bunny.
+
+leave bunny

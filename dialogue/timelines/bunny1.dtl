@@ -1,0 +1,14 @@
+[background fade="0.0"]
+[style name="dialogue_style"]
+join bunny center
+fox: Howdy there, Mrs. Bunny. Anything new and exciting in life?
+bunny: Things are going alright I guess, Mr. Fox. I just gave birth to a litter of fifty-seven last week. That makes two hundred and seventeen.
+- Congrats!
+	fox: Congratulations, Mrs. Bunny.
+- TWO HUNDRED SEVENTEEN?
+	fox: Two hundred and seventeen?! That’s insane!
+bunny: Yeah…they are a handful. Things like dinner and getting them to school are always hectic.
+fox: Wow. Two hundred and seventeen. I only have to manage a handful of customers and that is hard enough as it is.
+bunny: Thanks for the coffee, Mr. Fox. See you another time.
+fox: See you around, Mrs. Bunny.
+leave bunny
