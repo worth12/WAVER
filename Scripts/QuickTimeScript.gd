@@ -1,55 +1,76 @@
 extends Control
 
-@export var speed: float = 1.0  # Speed of the bar movement
-var direction: int = 1         # Direction of movement (1 or -1)
-var progress_value: float = 0  # Current value of the ProgressBar
+@export var speed: float = 200.0  # Pixels per second
+var direction: int = 1            # Moving up (1) or down (-1)
 
-var green_zone_start: float = 45  # Adjust based on your green zone's position
-var green_zone_end: float = 55    # Adjust based on your green zone's position
+# Define the green and orange zones
+@export var green_zone_start: float = 300  # Start position of the green zone (pixels)
+@export var green_zone_end: float = 500    # End position of the green zone (pixels)
+@export var orange_zone_start_1: float = 100
+@export var orange_zone_end_1: float = 200
+@export var orange_zone_start_2: float = 600
+@export var orange_zone_end_2: float = 700
 
-var orange_zone_start: float = 40
-var orange_zone_end: float = 44
+@onready var score_boxes = [$ScoreContainer/score1, $ScoreContainer/score2, $ScoreContainer/score3]
+var score_textures = ["res://Assets/8445903.png", "res://Assets/8445922.png", "res://Assets/8445773.png"]
 
-var orange_zone_start_2: float = 56
-var orange_zone_end_2: float = 60
+var try: int = 0
+var running: bool = true
+signal minigame_closed
 
+# Indicator movement
+var indicator_y: float = 0  # Current Y position of the indicator
 
-signal success  # Signal for a successful hit
-signal meh  # Signal for a okay
-signal failure  # Signal for a miss
+func _ready():
+	# Initialize the starting position of the indicator
+	indicator_y = 0
+	update_indicator_position()
+	reset_score()
 
 func _process(delta):
-	# Update the progress value
-	progress_value += direction * speed * delta
+	if running:
+		# Move the indicator
+		indicator_y += direction * speed * delta
 
-	# Reverse direction if it hits the edges
-	if progress_value >= 100:
-		direction = -1
-	elif progress_value <= 0:
-		direction = 1
+		# Check if it hits the edges of the Slider
+		if indicator_y >= $Slider.size.y - $Slider/Indicator.size.y:  # Bottom edge
+			direction = -1
+		elif indicator_y <= 0:  # Top edge
+			direction = 1
 
-	# Update the ProgressBar value
-	$ProgressBar.value = progress_value
-	
+		# Update the indicator position
+		update_indicator_position()
+	else:
+		if Input.is_key_pressed(KEY_E):
+			self.hide()
+
+func update_indicator_position():
+	$Slider/Indicator.position.y = indicator_y
+
 func _input(event):
-	if event.is_action_pressed("ui_accept"):  # Replace with your action name
+	if event.is_action_pressed("ui_accept"):
 		check_hit()
 
 func check_hit():
-	if ((orange_zone_start <= progress_value) && (progress_value <= orange_zone_end)) || ((orange_zone_start_2 <= progress_value) && (progress_value <= orange_zone_end_2)):
-		emit_signal("meh")
-		print("Meh")
-	elif (green_zone_start <= progress_value) && (progress_value <= green_zone_end):
-		emit_signal("success")
-		print("Success!")  # Add your success logic here
+	# Get the indicator's position
+	var indicator_pos = $Slider/Indicator.position.y + ($Slider/Indicator.size.y/2)
+
+	# Check if the indicator is in the green or orange zones
+	if (green_zone_start <= indicator_pos) && (indicator_pos <= green_zone_end):
+		show_score(0) # Green zone success
+	elif ((orange_zone_start_1 <= indicator_pos) && (indicator_pos <= orange_zone_end_1)) or (orange_zone_start_2 <= indicator_pos) && (indicator_pos <= orange_zone_end_2):
+		show_score(1) # Orange zone success
 	else:
-		emit_signal("failure")
-		print("Miss!")  # Add your failure logic here
+		show_score(2) # Missed entirely
+	if try == 3:
+		$Continue.text = "Press E To Continue"
+		running = false
 
-func _on_success():
-	$Button.text = "Great Timing!"
-	$Button.modulate = Color(0, 1, 0)  # Green
+func show_score(score):
+	score_boxes[try].texture = ResourceLoader.load(score_textures[score])
+	try += 1
 
-func _on_failure():
-	$Button.text = "Too Bad!"
-	$Button.modulate = Color(1, 0, 0)  # Red
+func reset_score():
+	try = 0
+	for score_box in score_boxes:
+		score_box.texture = null

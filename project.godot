@@ -13,7 +13,16 @@ config_version=5
 config/name="WAVER"
 run/main_scene="res://Scenes/QuickTime.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
+
+[display]
+
+window/vsync/vsync_mode=0
+
+[gui]
+
+common/snap_controls_to_pixels=false
 
 [rendering]
 
