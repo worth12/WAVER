@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c8fqxwtuau3br" path="res://Scenes/QuickTime.tscn" id="4_n0vdr"]
 [ext_resource type="PackedScene" uid="uid://u0jqml7awiuv" path="res://Scenes/Coffee.tscn" id="4_xa6my"]
 
-[node name="Node2D" type="Node2D"]
+[node name="MiniGames" type="Node2D"]
 script = ExtResource("1_7cy30")
 
 [node name="latte art" type="Sprite2D" parent="."]

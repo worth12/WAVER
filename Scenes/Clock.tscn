@@ -1,8 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://fiavc4ip8pqy"]
+[gd_scene load_steps=10 format=3 uid="uid://fiavc4ip8pqy"]
 
+[ext_resource type="Texture2D" uid="uid://dqp86mkqw6yc3" path="res://Assets/clockFace.png" id="1_iahtn"]
+[ext_resource type="Script" path="res://Scripts/clock.gd" id="1_jcf73"]
 [ext_resource type="Script" path="res://time/time_system.gd" id="1_s6v3k"]
 [ext_resource type="Script" path="res://Scripts/date_time.gd" id="2_5wqjj"]
+[ext_resource type="Texture2D" uid="uid://bdqohh7ucfgf8" path="res://Assets/smallHand.png" id="2_nlwuo"]
 [ext_resource type="PackedScene" uid="uid://b0eje7s8j2r0l" path="res://Scenes/time_ui.tscn" id="3_bpcsh"]
+[ext_resource type="Texture2D" uid="uid://cv811lff6pc4w" path="res://Assets/bigHand.png" id="3_t3wsr"]
 [ext_resource type="Script" path="res://Scripts/time_ui.gd" id="4_22u4e"]
 
 [sub_resource type="Resource" id="Resource_xmw8x"]
@@ -13,12 +17,24 @@ hours = 8
 days = 0
 
 [node name="Clock Sprite" type="Node2D"]
+script = ExtResource("1_jcf73")
 
-[node name="Clock Face" type="Sprite2D" parent="."]
+[node name="ClockFace" type="Sprite2D" parent="."]
+position = Vector2(384, 384)
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("1_iahtn")
 
-[node name="Hour Hand" type="Sprite2D" parent="."]
+[node name="HourHand" type="Sprite2D" parent="."]
+position = Vector2(384, 384)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_nlwuo")
+offset = Vector2(0, -110)
 
-[node name="Minute Hand" type="Sprite2D" parent="."]
+[node name="MinuteHand" type="Sprite2D" parent="."]
+position = Vector2(384, 384)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_t3wsr")
+offset = Vector2(0, -155)
 
 [node name="TimeSystem" type="Node" parent="."]
 script = ExtResource("1_s6v3k")
