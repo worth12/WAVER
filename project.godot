@@ -11,6 +11,20 @@ config_version=5
 [application]
 
 config/name="WAVER"
-run/main_scene="res://Scenes/control.tscn"
+
+run/main_scene="res://Scenes/open minigame.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+run/max_fps=60
+config/icon="res://assets/icon.svg"
+
+[display]
+
+window/vsync/vsync_mode=0
+
+[gui]
+
+common/snap_controls_to_pixels=false
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

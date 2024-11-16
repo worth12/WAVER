@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr7phhidj8tur"]
+
+[ext_resource type="Script" path="res://Scripts/Node2D.gd" id="1_7cy30"]
+[ext_resource type="Texture2D" uid="uid://323ardcs5sob" path="res://assets/8445773.png" id="2_1b2dr"]
+[ext_resource type="Script" path="res://Scripts/Sprite2D.gd" id="2_qhdku"]
+[ext_resource type="PackedScene" uid="uid://c8fqxwtuau3br" path="res://Scenes/QuickTime.tscn" id="4_n0vdr"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7cy30")
+
+[node name="rdy to order" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(538, 298)
+texture = ExtResource("2_1b2dr")
+script = ExtResource("2_qhdku")
+
+[node name="popup" type="Window" parent="rdy to order"]
+unique_name_in_owner = true
+mode = 2
+position = Vector2i(110, 81)
+size = Vector2i(940, 460)
+
+[node name="Control" parent="rdy to order/popup" instance=ExtResource("4_n0vdr")]
