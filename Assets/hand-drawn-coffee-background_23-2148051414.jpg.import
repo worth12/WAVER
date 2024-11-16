@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hufmgcy5m027"
-path="res://.godot/imported/hand-drawn-coffee-background_23-2148051414.jpg-f424ca983716c335aafb90eaef7853f0.ctex"
+uid="uid://dbv8jxepvpcfn"
+path="res://.godot/imported/hand-drawn-coffee-background_23-2148051414.jpg-04682d7e82009dbf74f7b3de1080313d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hand-drawn-coffee-background_23-2148051414.jpg"
-dest_files=["res://.godot/imported/hand-drawn-coffee-background_23-2148051414.jpg-f424ca983716c335aafb90eaef7853f0.ctex"]
+source_file="res://Assets/hand-drawn-coffee-background_23-2148051414.jpg"
+dest_files=["res://.godot/imported/hand-drawn-coffee-background_23-2148051414.jpg-04682d7e82009dbf74f7b3de1080313d.ctex"]
 
 [params]
 

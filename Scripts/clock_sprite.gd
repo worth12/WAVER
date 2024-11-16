@@ -1,8 +1,8 @@
 extends Node2D
 
-func _animate_clock_face():
+func _animate_clock_face(hours):
 	# Example: Glow the clock face during work hours
-	if hours >= 9 and hours < 17:
+	if (hours >= 9) and (hours < 17):
 		$ClockSprite.modulate = Color(1, 1, 1, 1)  # Fully visible
 	else:
 		$ClockSprite.modulate = Color(0.5, 0.5, 0.5, 1)  # Dimmed

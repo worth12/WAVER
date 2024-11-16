@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://u0jqml7awiuv"]
 
 [ext_resource type="Script" path="res://Scripts/Coffee_Pouring_Minigame.gd" id="1_mejo2"]
-[ext_resource type="Texture2D" uid="uid://detip01cpqwrw" path="res://assets/1386638.png" id="2_pm21e"]
-[ext_resource type="Texture2D" uid="uid://cou2v08k0j0wg" path="res://assets/vector-cartoon-wooden-texture-background-600nw-2145003917.png" id="2_xc4wm"]
+[ext_resource type="Texture2D" uid="uid://6fh2532iylep" path="res://Assets/1386638.png" id="2_pm21e"]
+[ext_resource type="Texture2D" uid="uid://y77gf756avay" path="res://Assets/vector-cartoon-wooden-texture-background-600nw-2145003917.png" id="2_xc4wm"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

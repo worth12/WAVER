@@ -29,4 +29,3 @@ func increase_by_sec(delta_seconds: float) -> void:
 	if hours == 5:
 		return
 	print_debug(str(days) + ":" + str(hours) + ":" + str(minutes) + ":" + str(seconds))
-

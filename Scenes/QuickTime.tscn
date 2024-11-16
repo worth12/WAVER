@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c8fqxwtuau3br"]
 
 [ext_resource type="Script" path="res://Scripts/QuickTimeScript.gd" id="1_mu70f"]
-[ext_resource type="Texture2D" uid="uid://hufmgcy5m027" path="res://assets/hand-drawn-coffee-background_23-2148051414.jpg" id="2_tppv0"]
-[ext_resource type="Texture2D" uid="uid://1bwo58fmeotm" path="res://assets/cute-planner-sticker-png.png" id="3_plnsk"]
+[ext_resource type="Texture2D" uid="uid://dbv8jxepvpcfn" path="res://Assets/hand-drawn-coffee-background_23-2148051414.jpg" id="2_tppv0"]
+[ext_resource type="Texture2D" uid="uid://d4bydumv5ur4j" path="res://Assets/cute-planner-sticker-png.png" id="3_plnsk"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d5ojw"]
 
