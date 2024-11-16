@@ -1,0 +1,27 @@
+[background fade="0.0"]
+join cow center
+join fox left
+
+fox: [color=#A8A8A8](after a long pause)[/color] Betty… I've been thinking about what you said the other day. About your workers.
+cow: [color=#A8A8A8](still sweet but cautious)[/color] Now, Fox, don't you go frettin'. Business is business, and I run mine honest as the day is long.
+
+- I'm not accusing you
+	fox: [color=#A8A8A8](gently)[/color] I'm not accusing you, Betty. I just… I don't know if it's fair to them.
+- Isn't that a problem?
+	fox: [color=#A8A8A8](firmly)[/color] But if they're in debt and can't leave, isn't that a problem?
+
+cow: [color=#A8A8A8](sighing)[/color] You think I don't know it's tough? I ain't blind to the world's troubles. But those girls would have nothin' if it weren't for me.
+
+- Could do more
+	fox: [color=#A8A8A8](sympathetic)[/color] I know you're trying to help, Betty. I just wonder if there's more you could do.
+- No real choice
+	fox: [color=#A8A8A8](challenging)[/color] But is it really help if they don't have a choice?
+
+cow: [color=#A8A8A8](shaking her head)[/color] Lord, Fox, you're a hard one to please. I do what I can with what I've got. It ain't perfect, but it's better than nothin'.
+fox: I know, Betty. I know you're doing your best.
+cow: [color=#A8A8A8](standing up)[/color] Well, I've kept you long enough. Ain't no point in stewin' over this all night. Think on what I've said, sugar. We'll talk again soon, alright?
+[color=#A8A8A8](She takes her purse and heads toward the door.)[/color]
+fox: Alright, Betty. I'll see you soon.
+[color=#A8A8A8](She exits, and the café door chimes softly as she leaves.)[/color]
+leave cow
+leave fox

@@ -23,6 +23,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "bunny": "res://dialogue/characters/bunny.dch",
 "cat": "res://dialogue/characters/cat.dch",
+"cow": "res://dialogue/characters/cow.dch",
 "fox": "res://dialogue/characters/fox.dch",
 "turtle": "res://dialogue/characters/turtle.dch"
 }
@@ -31,6 +32,10 @@ directories/dtl_directory={
 "bunny2": "res://dialogue/timelines/bunny2.dtl",
 "bunny3": "res://dialogue/timelines/bunny3.dtl",
 "bunny4": "res://dialogue/timelines/bunny4.dtl",
+"cow1": "res://dialogue/timelines/cow1.dtl",
+"cow2": "res://dialogue/timelines/cow2.dtl",
+"cow3": "res://dialogue/timelines/cow3.dtl",
+"cow4": "res://dialogue/timelines/cow4.dtl",
 "turtle1": "res://dialogue/timelines/turtle1.dtl",
 "turtle2": "res://dialogue/timelines/turtle2.dtl",
 "turtle3": "res://dialogue/timelines/turtle3.dtl"
