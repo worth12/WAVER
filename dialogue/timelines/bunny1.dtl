@@ -1,14 +1,24 @@
 [background fade="0.0"]
 [style name="dialogue_style"]
 join bunny center
-fox: Howdy there, Mrs. Bunny. Anything new and exciting in life?
-bunny: Things are going alright I guess, Mr. Fox. I just gave birth to a litter of fifty-seven last week. That makes two hundred and seventeen.
+join fox left
+
+fox: [color=#A8A8A8](cheerful)[/color] Howdy there, Bonnie. Anything new and exciting in life?
+
+bunny: [color=#A8A8A8](smiling)[/color] Things are going alright I guess, Fox. I just gave birth to a litter of fifty-seven last week. That makes two hundred and seventeen.
+
 - Congrats!
-	fox: Congratulations, Mrs. Bunny.
-- TWO HUNDRED SEVENTEEN?
-	fox: Two hundred and seventeen?! That’s insane!
-bunny: Yeah…they are a handful. Things like dinner and getting them to school are always hectic.
+	fox: [color=#A8A8A8](warm smile)[/color] Congratulations, Bonnie.
+- TWO HUNDRED SEVENTEEN??
+	fox: [color=#A8A8A8](flabbergasted)[/color] Two hundred and seventeen?! That's insane!
+
+bunny: [color=#A8A8A8](pondering)[/color] Yeah...they are a handful. Things like dinner and getting them to school are always hectic.
+
 fox: Wow. Two hundred and seventeen. I only have to manage a handful of customers and that is hard enough as it is.
-bunny: Thanks for the coffee, Mr. Fox. See you another time.
-fox: See you around, Mrs. Bunny.
+
+bunny: [color=#A8A8A8](waves)[/color] Thanks for the coffee, Fox. See you another time.
+
+fox: [color=#A8A8A8](waves back)[/color] See you around, Bonnie.
+
 leave bunny
+leave fox
