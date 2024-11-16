@@ -58,5 +58,5 @@ func _resetMinigame():
 	reset_cup()
 
 func close_game():
-	_resetMinigame()
 	get_parent().hide()
+	_ready()

@@ -8,5 +8,5 @@ func _input(event):
 
 func _on_sprite_clicked():
 	# Transition to a new scene
-	print("wow")
+	$popup/Control._ready()
 	$popup.show()

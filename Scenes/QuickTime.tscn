@@ -24,10 +24,10 @@ orange_zone_end_2 = 275.0
 [node name="Slider" type="TextureRect" parent="."]
 z_index = -1
 layout_mode = 0
-offset_left = 64.0
-offset_top = 56.0
-offset_right = 214.0
-offset_bottom = 456.0
+offset_left = 96.0
+offset_top = 32.0
+offset_right = 246.0
+offset_bottom = 432.0
 texture = ExtResource("2_tppv0")
 expand_mode = 4
 stretch_mode = 6
