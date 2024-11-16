@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://fiavc4ip8pqy"]
+
+[ext_resource type="Script" path="res://time/time_system.gd" id="1_s6v3k"]
+[ext_resource type="Script" path="res://date_time.gd" id="2_5wqjj"]
+
+[sub_resource type="Resource" id="Resource_xmw8x"]
+script = ExtResource("2_5wqjj")
+seconds = 0
+minutes = 0
+hours = 8
+days = 0
+
+[node name="Clock Sprite" type="Node2D"]
+
+[node name="Clock Face" type="Sprite2D" parent="."]
+
+[node name="Hour Hand" type="Sprite2D" parent="."]
+
+[node name="Minute Hand" type="Sprite2D" parent="."]
+
+[node name="TimeSystem" type="Node" parent="."]
+script = ExtResource("1_s6v3k")
+date_time = SubResource("Resource_xmw8x")
+ticks_pr_seconds = 600
