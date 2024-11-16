@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8fqxwtuau3br"]
+
+[ext_resource type="Script" path="res://Scripts/QuickTimeScript.gd" id="1_mu70f"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d5ojw"]
+
+[node name="Control" type="Control"]
+material = SubResource("CanvasItemMaterial_d5ojw")
+layout_mode = 3
+anchor_left = -0.393
+anchor_top = -0.389
+anchor_right = 0.356
+anchor_bottom = 0.403
+offset_left = 452.736
+offset_top = 251.072
+offset_right = 35.888
+offset_bottom = 2.85599
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.93552, 1.93552)
+script = ExtResource("1_mu70f")
+speed = 100.0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.387
+anchor_top = 0.151
+anchor_right = 0.387
+anchor_bottom = 0.151
+offset_left = 32.5106
+offset_top = 0.800861
+offset_right = 86.5106
+offset_bottom = 119.801
+step = 1.0
+fill_mode = 2
+show_percentage = false
+
+[node name="ColorRect" type="ColorRect" parent="ProgressBar"]
+z_index = -1
+layout_mode = 0
+offset_top = 51.0
+offset_right = 54.0
+offset_bottom = 62.0
+color = Color(4.06705e-06, 0.69624, 5.77569e-07, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ProgressBar"]
+z_index = -1
+layout_mode = 0
+offset_top = 62.0
+offset_right = 54.0
+offset_bottom = 74.0
+color = Color(0.737255, 0.705882, 0.027451, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="ProgressBar"]
+z_index = -1
+layout_mode = 0
+offset_top = 39.0
+offset_right = 54.0
+offset_bottom = 51.0
+color = Color(0.737255, 0.705882, 0.027451, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 184.963
+offset_top = 168.43
+offset_right = 275.963
+offset_bottom = 191.43
+text = "Press Space"
