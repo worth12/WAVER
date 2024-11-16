@@ -2,7 +2,8 @@ extends Control
 
 # Coffee Minigame variables
 var currentCoffeeAmount: float = 0.0
-var targetCoffeeAmount: float = 0.0 # Will be randomize to be a value between 100 and 300
+var targetCoffeeAmount: float = 0.0 # Will be randomize to be a value between 100 and 140
+var maxCoffeeAmount: float =  180.0
 @export var pourSpeed: float = 60.0 # number of mL of coffee poured per second
 @export var margin: float = 10.0 # Acceptable margin of error
 
@@ -163,6 +164,8 @@ func continue_pouring(delta: float):
 	$Cup/Coffee.position.y = $Cup.size.y - currentCoffeeAmount - 16
 	$Cup/Coffee.size.y = currentCoffeeAmount
 	update_stream_points()
+	if currentCoffeeAmount > maxCoffeeAmount:
+		stop_pouring()
 
 func stop_pouring():
 	is_pouring = false
