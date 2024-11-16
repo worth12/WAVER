@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="WAVER"
-config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+run/main_scene="res://Scenes/open minigame.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://assets/icon.svg"
