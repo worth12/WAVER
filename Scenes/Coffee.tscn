@@ -1,11 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5dug6ks62y2v"]
+[gd_scene load_steps=4 format=3 uid="uid://c5dug6ks62y2v"]
 
 [ext_resource type="Script" path="res://Scripts/Coffee_Pouring_Minigame.gd" id="1_mejo2"]
 [ext_resource type="Texture2D" uid="uid://6fh2532iylep" path="res://Assets/1386638.png" id="2_pm21e"]
 [ext_resource type="Texture2D" uid="uid://y77gf756avay" path="res://Assets/vector-cartoon-wooden-texture-background-600nw-2145003917.png" id="2_xc4wm"]
-
-[sub_resource type="Gradient" id="Gradient_coffee"]
-colors = PackedColorArray(0.353332, 0.173159, 0.105567, 1, 0.353332, 0.173159, 0.105567, 0)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -60,19 +57,13 @@ position = Vector2(-25, 0)
 color = Color(0.15, 0.15, 0.15, 1)
 polygon = PackedVector2Array(-10, -20, -5, -20, -5, 20, -10, 20)
 
-[node name="PourEffect" type="CPUParticles2D" parent="CoffeePot"]
-position = Vector2(40, 30)
-emitting = false
-amount = 50
-lifetime = 0.5
-direction = Vector2(0, 1)
-gravity = Vector2(0, 490)
-initial_velocity_min = 100.0
-initial_velocity_max = 120.0
-scale_amount_min = 2.0
-scale_amount_max = 4.0
-color = Color(0.353332, 0.173159, 0.105567, 1)
-color_ramp = SubResource("Gradient_coffee")
+[node name="SpoutTip" type="Node2D" parent="CoffeePot"]
+position = Vector2(45, 30)
+
+[node name="PourEffect" type="Line2D" parent="CoffeePot/SpoutTip"]
+top_level = true
+width = 4.0
+default_color = Color(0.353332, 0.173159, 0.105567, 1)
 
 [node name="TargetLabel" type="Label" parent="."]
 layout_mode = 0
