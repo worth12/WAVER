@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="WAVER"
+run/main_scene="res://Scenes/open minigame.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+run/max_fps=60
+config/icon="res://assets/icon.svg"
 
 [autoload]
 
@@ -88,3 +90,10 @@ dialogic_default_action={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
+
+[gui]
+common/snap_controls_to_pixels=false
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
