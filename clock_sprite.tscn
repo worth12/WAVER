@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://fiavc4ip8pqy"]
+[gd_scene load_steps=6 format=3 uid="uid://fiavc4ip8pqy"]
 
 [ext_resource type="Script" path="res://time/time_system.gd" id="1_s6v3k"]
 [ext_resource type="Script" path="res://date_time.gd" id="2_5wqjj"]
+[ext_resource type="PackedScene" uid="uid://b0eje7s8j2r0l" path="res://time_ui.tscn" id="3_bpcsh"]
+[ext_resource type="Script" path="res://time_ui.gd" id="4_22u4e"]
 
 [sub_resource type="Resource" id="Resource_xmw8x"]
 script = ExtResource("2_5wqjj")
 seconds = 0
 minutes = 0
-hours = 8
+hours = 4
 days = 0
 
 [node name="Clock Sprite" type="Node2D"]
@@ -22,3 +24,10 @@ days = 0
 script = ExtResource("1_s6v3k")
 date_time = SubResource("Resource_xmw8x")
 ticks_pr_seconds = 600
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Time GUI" parent="CanvasLayer" instance=ExtResource("3_bpcsh")]
+script = ExtResource("4_22u4e")
+
+[connection signal="updated" from="TimeSystem" to="CanvasLayer/Time GUI" method="_on_time_system_updated"]

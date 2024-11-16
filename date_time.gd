@@ -3,7 +3,7 @@ class_name DateTime extends Resource
 
 @export_range(0, 59) var seconds: int = 0
 @export_range(0, 59) var minutes: int = 0
-@export_range(0, 12) var hours: int = 8
+@export_range(0, 12) var hours: int = 4
 @export_range(0, 14) var days: int = 0
 
 var delta_time: float = 0
