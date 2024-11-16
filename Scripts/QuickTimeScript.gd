@@ -66,6 +66,8 @@ func check_hit():
 	if try == 3:
 		$Continue.text = "Press E To Continue"
 		running = false
+	else:
+		indicator_y = 0
 
 func show_score(score):
 	score_boxes[try].texture = ResourceLoader.load(score_textures[score])
