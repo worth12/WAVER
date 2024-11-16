@@ -1,0 +1,73 @@
+[background fade="0.0"]
+join cat center
+join fox left
+
+# [background_animation] door_chime
+cat: [color=#A8A8A8](checks watch)[/color] 9:27 AM precisely. Optimal coffee acquisition time.
+cat: [color=#A8A8A8](pleased)[/color] Punctuality. A vital component of proper coffee service.
+
+cat: [color=#A8A8A8](adjusts tiny blazer)[/color] I see you're admiring my business attire.
+cat: Today's quarterly temperature assessment requires proper presentation.
+
+cat: [color=#A8A8A8](places tiny thermal thermometer on counter)[/color] Now then...
+cat: I trust you're aware of Regulation 143?
+
+- Ask about Regulation 143
+	fox: What's Regulation 143?
+	cat: Coffee temperature regulation. 143°F or 61.7°C precisely.
+	cat: A standard derived from extensive research.
+	- Request research details
+		fox: Could you tell me more about this research?
+		cat: [color=#A8A8A8](pulls out color-coded binder)[/color] I thought you'd never ask!
+	- Look nervous
+		fox: [color=#A8A8A8](looking anxious)[/color] ...
+		cat: Don't worry, I've prepared a simplified brief.
+- Pretend to know
+	fox: [color=#A8A8A8](nodding unconvincingly)[/color] Oh, right... that regulation.
+	cat: [color=#A8A8A8](squints)[/color] Your poker face needs work. Let me explain...
+	cat: [color=#A8A8A8](slides over a spreadsheet)[/color] My temperature deviation chart will illuminate things.
+
+# [background_animation] suspicious_figures_in_alley
+# [background_sound] quiet_whispers
+
+[color=#A8A8A8](You can hear whispering through the window...)[/color]
+
+cat: [color=#A8A8A8](peers through window)[/color] Those gentlemen in the alley...
+cat: [color=#A8A8A8](annoyed)[/color] Their coffee-drinking posture is atrocious.
+
+- Ask about proper posture
+	fox: What is the proper posture?
+	cat: [color=#A8A8A8](demonstrates)[/color] Spine straight, cup at 42.5 degrees...
+- Look at suspicious figures
+	fox: [color=#A8A8A8](glancing at the alley)[/color] Their ergonomics do seem concerning...
+	cat: Yes, their ergonomics are concerning, aren't they?
+
+cat: [color=#A8A8A8](carefully dips thermometer)[/color] Now for the moment of truth...
+
+- Watch nervously
+	fox: [color=#A8A8A8](watching intently)[/color] ...
+	cat: [color=#A8A8A8](intensely focused)[/color] Shhh... the thermometer is calibrating...
+- Try to distract her
+	fox: [color=#A8A8A8](waving hand)[/color] Hey, did you see that bird outside?
+	cat: Please, this requires my complete concentration.
+
+cat: [color=#A8A8A8](purrs professionally)[/color] Ah! A perfect 143°F!
+cat: You know, proper temperature control became my passion after... the incident.
+
+- Ask about the incident
+	fox: What incident?
+	cat: [color=#A8A8A8](touches tongue with paw)[/color] A regrettable hot chocolate mishap in my kitten days.
+	cat: Since then, I've dedicated my career to beverage temperature optimization.
+- Express sympathy
+	fox: [color=#A8A8A8](sympathetic)[/color] That sounds rough...
+	cat: [color=#A8A8A8](makes note in tiny planner)[/color] Your empathy is noted and appreciated.
+
+cat: I'll make a note of your attention to temperature detail in my quarterly report.
+cat: Same time tomorrow? The morning temperature audit waits for no cat.
+
+# [background_animation] suspicious_figures_leaving
+[color=#A8A8A8]The men from the alley leave.[/color]
+cat: [color=#A8A8A8](not looking up from planner)[/color] Oh, do tell those gentlemen their coffee will get cold at that angle.
+
+leave cat
+leave fox

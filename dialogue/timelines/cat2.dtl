@@ -1,0 +1,38 @@
+[background fade="0.0"]
+join cat center
+join fox left
+
+# [background_animation] shady_character_in_window_seat
+[color=#A8A8A8](A suspicious-looking character is sitting in Mittens' usual window seat.)[/color]
+
+cat: [color=#A8A8A8](frozen in entrance)[/color] We have a situation.
+
+cat: According to "Power Moves for Professional Pets - Chapter 3"...
+cat: [color=#A8A8A8](serious)[/color] This calls for strategic negotiation.
+
+- Offer to help negotiate
+	fox: Let me help you negotiate with them.
+	cat: [color=#A8A8A8](pleased)[/color] Excellent. You can be my Chief Operations Officer of Seating Arrangements.
+	[color=#A8A8A8](You politely explain to the stranger that this is Mittens' regular seat for her important temperature assessments.)[/color]
+	set {cat.did_negotiate_for_seat} = true
+- Suggest another seat
+	fox: Maybe you could sit somewhere else?
+	cat: [color=#A8A8A8](pulls out solar calculator)[/color] The sun angle coefficients are all wrong.
+
+# [background_animation] suspicious_package_under_seat
+[color=#A8A8A8](While Mittens is calculating sun angles, you notice a mysterious package tucked under the suspicious person's seat.)[/color]
+
+cat: [color=#A8A8A8](pausing calculations)[/color] Oh, what's that under the...
+cat: [color=#A8A8A8](annoyed)[/color] Tsk. Improper coffee bean storage if I ever saw one.
+
+if {cat.did_negotiate_for_seat} == true:
+	[color=#A8A8A8](The current occupant hurriedly moves to another seat, leaving the package behind.)[/color]
+	cat: [color=#A8A8A8](settling into window seat)[/color] A masterclass in corporate negotiations.
+	[color=#A8A8A8](From this new vantage point, you can see the package more clearly - it's definitely not coffee beans.)[/color]
+else:
+	[color=#A8A8A8](Mittens sits somewhere else...)[/color]
+	cat: [color=#A8A8A8](sets up makeshift sun patch)[/color] Adaptation is key in modern business.
+	[color=#A8A8A8](The suspicious character keeps glancing nervously at their package while Mittens arranges her new spot.)[/color]
+
+leave cat
+leave fox

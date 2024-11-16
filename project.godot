@@ -32,6 +32,10 @@ directories/dtl_directory={
 "bunny2": "res://dialogue/timelines/bunny2.dtl",
 "bunny3": "res://dialogue/timelines/bunny3.dtl",
 "bunny4": "res://dialogue/timelines/bunny4.dtl",
+"cat1": "res://dialogue/timelines/cat1.dtl",
+"cat2": "res://dialogue/timelines/cat2.dtl",
+"cat3": "res://dialogue/timelines/cat3.dtl",
+"cat4": "res://dialogue/timelines/cat4.dtl",
 "cow1": "res://dialogue/timelines/cow1.dtl",
 "cow2": "res://dialogue/timelines/cow2.dtl",
 "cow3": "res://dialogue/timelines/cow3.dtl",
@@ -43,7 +47,11 @@ directories/dtl_directory={
 glossary/default_case_sensitive=true
 layout/style_list=["res://dialogue/styles/dialogue_style.tres"]
 layout/default_style="res://dialogue/styles/dialogue_style.tres"
-variables={}
+variables={
+"cat": {
+"did_negotiate_for_seat": false
+}
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
