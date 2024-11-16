@@ -1,15 +1,17 @@
 extends Node2D
 
-# Variables for tracking the pattern
-var pattern_points = []  # Array of Vector2 points defining the ideal pattern
-var player_points = []   # Array of Vector2 points the player has drawn
+enum Patterns { HEART, ZIGZAG, STAR }
+
+var pattern_points = []
+var player_points = []
 var is_drawing = false
 var tolerance = 15.0
 var score = 0.0
 var max_score = 100.0
-var minimum_points = 30  # Increased minimum points needed
+var minimum_points = 30
 var time_left = 30
-var points_needed_per_segment = 8  # Increased points needed per segment
+var points_needed_per_segment = 8
+var current_pattern = Patterns.HEART
 
 @onready var pattern_line = $PatternLine
 @onready var player_line = $PlayerLine
@@ -18,38 +20,40 @@ var points_needed_per_segment = 8  # Increased points needed per segment
 @onready var time_label = $TimeLabel
 
 func _process(_delta):
-	# Update time display based on timer's time_left property
 	time_left = int(game_timer.time_left)
 	update_time_display()
 
 func _ready():
-	setup_heart_pattern()
+	randomize()
+	current_pattern = randi() % Patterns.size()
+	setup_pattern()
 	draw_pattern()
 	
 	pattern_line.width = 25.0
-	pattern_line.default_color = Color(0.8, 0.8, 0.8, 0.3)
+	pattern_line.default_color = Color(1, 1, 1, 0.4)
 	
 	player_line.width = 20.0
-	player_line.default_color = Color.WHITE
+	player_line.default_color = Color(0.4, 0.2, 0.1, 1)
 	
-	# Set up timer
-	game_timer.wait_time = 30.0  # Total time for the game
-	game_timer.one_shot = true   # Timer stops after reaching 0
+	game_timer.wait_time = 30.0
+	game_timer.one_shot = true
 	game_timer.connect("timeout", _on_game_timer_timeout)
 	game_timer.start()
 	update_time_display()
 
-func _on_game_timer_timeout():
-	stop_drawing()
-	update_time_display()
-
-func update_time_display():
-	time_label.text = "Time: " + str(time_left)
-
-func setup_heart_pattern():
-	# Simple heart pattern
+func setup_pattern():
 	var center = get_viewport_rect().size / 2
-	var size = 150
+	var size = 120
+	
+	match current_pattern:
+		Patterns.HEART:
+			setup_heart_pattern(center, size)
+		Patterns.ZIGZAG:
+			setup_zigzag_pattern(center, size)
+		Patterns.STAR:
+			setup_star_pattern(center, size)
+
+func setup_heart_pattern(center: Vector2, size: float):
 	pattern_points = [
 		center + Vector2(-size, -size/2),
 		center + Vector2(-size/2, -size),
@@ -59,6 +63,33 @@ func setup_heart_pattern():
 		center + Vector2(0, size),
 		center + Vector2(-size, -size/2)
 	]
+
+func setup_zigzag_pattern(center: Vector2, size: float):
+	pattern_points = []
+	var num_zigs = 4
+	var width = size * 2
+	var height = size * 1.5
+	var segment_width = width / (num_zigs - 1)
+	
+	for i in range(num_zigs * 2 - 1):
+		var x = center.x - width/2 + (i * segment_width/2)
+		var y = center.y + (height/2 if i % 2 == 0 else -height/2)
+		pattern_points.append(Vector2(x, y))
+
+func setup_star_pattern(center: Vector2, size: float):
+	pattern_points = []
+	var num_points = 5
+	var outer_radius = size
+	var inner_radius = size * 0.4
+	
+	for i in range(num_points * 2 + 1):
+		var radius = outer_radius if i % 2 == 0 else inner_radius
+		var angle = (i * PI * 2) / (num_points * 2)
+		var point = center + Vector2(
+			cos(angle - PI/2) * radius,
+			sin(angle - PI/2) * radius
+		)
+		pattern_points.append(point)
 
 func draw_pattern():
 	pattern_line.clear_points()
@@ -99,7 +130,6 @@ func add_point_to_drawing(pos: Vector2):
 	player_line.add_point(pos)
 
 func calculate_score():
-	# Only calculate score if we have enough points
 	if player_points.size() < minimum_points:
 		score = 0.0
 		return
@@ -110,45 +140,37 @@ func calculate_score():
 	var segments_completed = 0
 	var last_good_segment = -1
 	
-	# For each player point
 	for point in player_points:
 		var found_valid_point = false
-		# Only look at current segment and next segment
 		for i in range(current_segment, min(current_segment + 2, total_segments)):
 			var start = pattern_points[i]
 			var end = pattern_points[i + 1]
 			var distance = get_point_line_distance(point, start, end)
 			
-			# If we're close enough to the segment
 			if distance <= tolerance:
 				points_on_current_segment += 1
 				found_valid_point = true
 				last_good_segment = i
 				
-				# If we've made enough progress on this segment, move to next
 				if points_on_current_segment >= points_needed_per_segment:
 					segments_completed = i + 1
 					current_segment = i + 1
 					points_on_current_segment = 0
 				break
 		
-		# If point wasn't close to current or next segment, reduce score
 		if not found_valid_point:
-			score = max(0, score - 1)  # Penalty for straying from path
+			score = max(0, score - 1)
 	
-	# Calculate base score based on segments completed
 	score = (float(segments_completed) / total_segments) * max_score
 	
-	# For 100% score, must complete all segments and end near the end point
 	var dist_to_end = player_points[-1].distance_to(pattern_points[-1])
 	if segments_completed >= total_segments and dist_to_end <= tolerance:
-		# Check if they followed the path in sequence
 		if last_good_segment == total_segments - 1:
 			score = max_score
 		else:
-			score = max_score * 0.8  # Penalty for not following sequence
+			score = max_score * 0.8
 	else:
-		score *= 0.8  # Additional penalty for not completing
+		score *= 0.8
 	
 	update_score_display()
 
@@ -167,6 +189,13 @@ func calculate_final_score():
 	if player_points.size() < minimum_points:
 		score = 0.0
 	update_score_display()
+
+func _on_game_timer_timeout():
+	stop_drawing()
+	update_time_display()
+
+func update_time_display():
+	time_label.text = "Time: " + str(time_left)
 
 func update_score_display():
 	score_label.text = "Score: %d" % score
