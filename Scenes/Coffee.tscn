@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://u0jqml7awiuv"]
+[gd_scene load_steps=4 format=3 uid="uid://c5dug6ks62y2v"]
 
 [ext_resource type="Script" path="res://Scripts/Coffee_Pouring_Minigame.gd" id="1_mejo2"]
 [ext_resource type="Texture2D" uid="uid://6fh2532iylep" path="res://Assets/1386638.png" id="2_pm21e"]
@@ -43,16 +43,17 @@ color = Color(0.897064, 0, 0.225493, 1)
 [node name="TargetLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 160.0
-offset_top = 56.0
+offset_top = 72.0
 offset_right = 426.0
-offset_bottom = 143.0
+offset_bottom = 159.0
+horizontal_alignment = 1
 
 [node name="ResultLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 232.0
-offset_top = 558.0
-offset_right = 1166.0
-offset_bottom = 631.0
+offset_left = 58.0
+offset_top = 378.0
+offset_right = 540.0
+offset_bottom = 451.0
 horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]

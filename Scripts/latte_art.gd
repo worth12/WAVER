@@ -5,7 +5,8 @@ enum Patterns { HEART, ZIGZAG, STAR }
 var pattern_points = []
 var player_points = []
 var is_drawing = false
-var tolerance = 15.0
+var has_drawn = false
+var tolerance = 10.0
 var score = 0.0
 var max_score = 100.0
 var minimum_points = 30
@@ -18,12 +19,20 @@ var current_pattern = Patterns.HEART
 @onready var game_timer = $Timer
 @onready var score_label = $ScoreLabel
 @onready var time_label = $TimeLabel
+@onready var instructions = $Instructions
 
 func _process(_delta):
 	time_left = int(game_timer.time_left)
 	update_time_display()
+	if player_points.size() > 0:
+		if has_drawn && Input.is_key_pressed(KEY_E):
+			_close_game()
+		else:
+			pass
 
 func _ready():
+	has_drawn = false
+	instructions.text = "Trace the pattern to create latte art!"
 	randomize()
 	current_pattern = randi() % Patterns.size()
 	setup_pattern()
@@ -97,8 +106,8 @@ func draw_pattern():
 		pattern_line.add_point(point)
 
 func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
+	if event is InputEventMouseButton and not has_drawn:
+		if event.button_index == MOUSE_BUTTON_RIGHT:
 			if event.pressed:
 				start_drawing(event.position)
 			else:
@@ -119,8 +128,11 @@ func continue_drawing(pos: Vector2):
 
 func stop_drawing():
 	is_drawing = false
+	has_drawn = true
+	print("wahat")
 	if player_points.size() >= minimum_points:
 		calculate_final_score()
+		instructions.text = "Press E to Continue"
 	else:
 		score = 0.0
 		update_score_display()
@@ -199,3 +211,18 @@ func update_time_display():
 
 func update_score_display():
 	score_label.text = "Score: %d" % score
+	
+func _resetMinigame():
+	stop_drawing()
+	player_line.clear_points()
+	player_points.clear()
+	randomize()
+	current_pattern = randi() % Patterns.size()
+	setup_pattern()
+	draw_pattern()
+	
+func _close_game():
+	get_parent().hide()
+	_resetMinigame()
+	_ready()
+	

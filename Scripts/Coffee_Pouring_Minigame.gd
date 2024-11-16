@@ -24,6 +24,8 @@ func reset_cup():
 	$Cup/Fill_Line.position.y = $Cup.size.y - targetCoffeeAmount - 16
 	$Cup/Coffee.position.y = $Cup.size.y - 16
 	$Cup/Coffee.size.y = 0
+	resultLabel.text = ""
+	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float):
@@ -38,7 +40,7 @@ func _process(delta: float):
 			_checkCoffeeAmount()
 	else:
 		if Input.is_key_pressed(KEY_E):
-			close_game()
+			_close_game()
 
 # Checks to see if the targeted amount has been properly fulfilled
 func _checkCoffeeAmount():
@@ -57,6 +59,6 @@ func _resetMinigame():
 	currentLabel.text = "Current: %.1f mL" % currentCoffeeAmount
 	reset_cup()
 
-func close_game():
+func _close_game():
 	get_parent().hide()
 	_ready()

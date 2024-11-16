@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8fqxwtuau3br"]
+[gd_scene load_steps=6 format=3 uid="uid://n1cf2hhb8l6b"]
 
 [ext_resource type="Script" path="res://Scripts/QuickTimeScript.gd" id="1_mu70f"]
 [ext_resource type="Texture2D" uid="uid://dbv8jxepvpcfn" path="res://Assets/hand-drawn-coffee-background_23-2148051414.jpg" id="2_tppv0"]
