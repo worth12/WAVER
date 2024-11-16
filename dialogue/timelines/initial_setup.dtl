@@ -1,0 +1,4 @@
+[background fade="0.0"]
+join fox center
+[text_input text="What is your name?" var="player.name" placeholder="First Name" default="Fox"]
+leave fox

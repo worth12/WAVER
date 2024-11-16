@@ -4,7 +4,7 @@ join fox left
 
 [color=#A8A8A8](The coffee shop is in chaos - papers flying, customers ducking under tables, sirens wailing outside.)[/color]
 
-cat: [color=#A8A8A8](organizing papers, completely calm)[/color] Now, about our Proper Coffee Etiquette Seminar...
+cat: [color=#A8A8A8](organizing papers, completely calm)[/color] Now {player.name}, about our Proper Coffee Etiquette Seminar...
 
 [color=#A8A8A8](Several masked figures burst through the door, brandishing suspicious coffee thermometers.)[/color]
 
@@ -12,7 +12,7 @@ cat: [color=#A8A8A8](checking schedule)[/color] Unauthorized chaos is not on tod
 
 - Try to warn Mittens
 	fox: Mittens, I really think you should look up from your papers!
-	cat: Please, I'm in the middle of my presentation preparation.
+	cat: Please {player.name}, I'm in the middle of my presentation preparation.
 - Let events unfold
 	fox: [color=#A8A8A8](watches in amazement)[/color] ...
 	cat: [color=#A8A8A8](begins setting up tiny projector)[/color] Now then...

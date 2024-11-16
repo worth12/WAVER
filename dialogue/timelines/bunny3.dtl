@@ -15,6 +15,6 @@ bunny: [color=#A8A8A8](quietly)[/color] I don't think I can ever forgive my husb
 	fox: [color=#A8A8A8](nodding)[/color] Whenever I'm put in a difficult position, I always remember a piece of advice my mother gave me. Do what the heart says.
 - Do what needs to be done
 	fox: [color=#A8A8A8](solemnly)[/color] Do whatever needs to be done, Bonnie.
-bunny: [color=#A8A8A8](enlightened)[/color] I see...it all makes sense now. Thank you, Fox.
+bunny: [color=#A8A8A8](enlightened)[/color] I see...it all makes sense now. Thank you, {player.name}.
 leave bunny
 leave fox

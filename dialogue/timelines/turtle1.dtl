@@ -12,11 +12,11 @@ turtle: [color=#A8A8A8](smiling)[/color] Life is fantastic. I got a new boyfrien
 - Whoo hoo!
 	fox: [color=#A8A8A8](whistling)[/color] Whoo hoo!
 
-turtle: [color=#A8A8A8](smiling still)[/color] I can't tell you who he is, but I think he is the love of my life, Fox.
+turtle: [color=#A8A8A8](smiling still)[/color] I can't tell you who he is, but I think he is the love of my life, {player.name}.
 
 fox: [color=#A8A8A8](joking)[/color] That is amazing to hear, Shelly. So when's the wedding?
 
-turtle: [color=#A8A8A8](pondering)[/color] Hopefully soon. It has only been less than half a year, but time waits for no one. You have to take chances when you are young, right? Cya, Fox.
+turtle: [color=#A8A8A8](pondering)[/color] Hopefully soon. It has only been less than half a year, but time waits for no one. You have to take chances when you are young, right? Cya, {player.name}.
 
 fox: Goodbye, Shelly. Thanks for stopping by!
 

@@ -6,7 +6,7 @@ join fox left
 
 fox: [color=#A8A8A8](cheerful)[/color] Howdy, Bonnie. How have things been?
 
-bunny: [color=#A8A8A8](thankful)[/color] Great! My husband and that turtle girl are [color=darkred]no longer a problem[/color]! Thanks for your previous advice, Fox!
+bunny: [color=#A8A8A8](thankful)[/color] Great! My husband and that turtle girl are [color=darkred]no longer a problem[/color]! Thanks for your previous advice, {player.name}!
 
 fox: [color=#A8A8A8](smiling)[/color] I'm so glad the problem is resolved. How are the kids?
 
