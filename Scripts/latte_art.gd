@@ -32,6 +32,7 @@ func _process(_delta):
 
 func _ready():
 	has_drawn = false
+	score = 0
 	instructions.text = "Trace the pattern to create latte art!"
 	randomize()
 	current_pattern = randi() % Patterns.size()
@@ -107,10 +108,10 @@ func draw_pattern():
 
 func _input(event):
 	if event is InputEventMouseButton and not has_drawn:
-		if event.button_index == MOUSE_BUTTON_RIGHT:
+		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
 				start_drawing(event.position)
-			else:
+			elif is_drawing:
 				stop_drawing()
 	elif event is InputEventMouseMotion and is_drawing:
 		continue_drawing(event.position)
@@ -129,7 +130,6 @@ func continue_drawing(pos: Vector2):
 func stop_drawing():
 	is_drawing = false
 	has_drawn = true
-	print("wahat")
 	if player_points.size() >= minimum_points:
 		calculate_final_score()
 		instructions.text = "Press E to Continue"
