@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://fiavc4ip8pqy"]
 
 [ext_resource type="Script" path="res://time/time_system.gd" id="1_s6v3k"]
-[ext_resource type="Script" path="res://date_time.gd" id="2_5wqjj"]
-[ext_resource type="PackedScene" uid="uid://b0eje7s8j2r0l" path="res://time_ui.tscn" id="3_bpcsh"]
-[ext_resource type="Script" path="res://time_ui.gd" id="4_22u4e"]
+[ext_resource type="Script" path="res://Scripts/date_time.gd" id="2_5wqjj"]
+[ext_resource type="PackedScene" uid="uid://b0eje7s8j2r0l" path="res://Scenes/time_ui.tscn" id="3_bpcsh"]
+[ext_resource type="Script" path="res://Scripts/time_ui.gd" id="4_22u4e"]
 
 [sub_resource type="Resource" id="Resource_xmw8x"]
 script = ExtResource("2_5wqjj")
