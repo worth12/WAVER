@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5dug6ks62y2v"]
+[gd_scene load_steps=5 format=3 uid="uid://c5dug6ks62y2v"]
 
 [ext_resource type="Script" path="res://Scripts/Coffee_Pouring_Minigame.gd" id="1_mejo2"]
 [ext_resource type="Texture2D" uid="uid://6fh2532iylep" path="res://Assets/1386638.png" id="2_pm21e"]
 [ext_resource type="Texture2D" uid="uid://y77gf756avay" path="res://Assets/vector-cartoon-wooden-texture-background-600nw-2145003917.png" id="2_xc4wm"]
+
+[sub_resource type="Gradient" id="Gradient_coffee"]
+colors = PackedColorArray(0.353332, 0.173159, 0.105567, 1, 0.353332, 0.173159, 0.105567, 0)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,7 +15,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mejo2")
-pourSpeed = 60.0
 
 [node name="Cup" type="TextureRect" parent="."]
 layout_mode = 0
@@ -39,6 +41,38 @@ offset_top = 48.0
 offset_right = 176.0
 offset_bottom = 55.0
 color = Color(0.897064, 0, 0.225493, 1)
+
+[node name="CoffeePot" type="Node2D" parent="."]
+position = Vector2(375, 125)
+rotation = -3.14159
+
+[node name="PotSprite" type="Polygon2D" parent="CoffeePot"]
+color = Color(0.2, 0.2, 0.2, 1)
+polygon = PackedVector2Array(-20, -30, 20, -30, 30, 30, -30, 30)
+
+[node name="Spout" type="Polygon2D" parent="CoffeePot"]
+position = Vector2(25, 20)
+color = Color(0.15, 0.15, 0.15, 1)
+polygon = PackedVector2Array(-5, -10, 5, -10, 15, 10, 5, 10)
+
+[node name="Handle" type="Polygon2D" parent="CoffeePot"]
+position = Vector2(-25, 0)
+color = Color(0.15, 0.15, 0.15, 1)
+polygon = PackedVector2Array(-10, -20, -5, -20, -5, 20, -10, 20)
+
+[node name="PourEffect" type="CPUParticles2D" parent="CoffeePot"]
+position = Vector2(40, 30)
+emitting = false
+amount = 50
+lifetime = 0.5
+direction = Vector2(0, 1)
+gravity = Vector2(0, 490)
+initial_velocity_min = 100.0
+initial_velocity_max = 120.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+color = Color(0.353332, 0.173159, 0.105567, 1)
+color_ramp = SubResource("Gradient_coffee")
 
 [node name="TargetLabel" type="Label" parent="."]
 layout_mode = 0
