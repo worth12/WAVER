@@ -2,7 +2,7 @@
 join cat center
 join fox left
 
-cat: [color=#A8A8A8](adjusts tiny tie with paw)[/color] Good morning. I require your most precise latte artistry today.
+cat: [color=#A8A8A8](adjusts tiny tie with paw)[/color] Good morning, {player.name}. I require your most precise latte artistry today.
 
 - Confident in latte art skills
 	fox: [color=#A8A8A8](nods confidently)[/color] I've been practicing my technique.

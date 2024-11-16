@@ -42,6 +42,7 @@ directories/dtl_directory={
 "cow2": "res://dialogue/timelines/cow2.dtl",
 "cow3": "res://dialogue/timelines/cow3.dtl",
 "cow4": "res://dialogue/timelines/cow4.dtl",
+"initial_setup": "res://dialogue/timelines/initial_setup.dtl",
 "turtle1": "res://dialogue/timelines/turtle1.dtl",
 "turtle2": "res://dialogue/timelines/turtle2.dtl",
 "turtle3": "res://dialogue/timelines/turtle3.dtl"
@@ -52,6 +53,9 @@ layout/default_style="res://dialogue/styles/dialogue_style.tres"
 variables={
 "cat": {
 "did_negotiate_for_seat": false
+},
+"player": {
+"name": "Fox"
 }
 }
 extensions_folder="res://addons/dialogic_additions"

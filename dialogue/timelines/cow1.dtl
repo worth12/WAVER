@@ -3,7 +3,7 @@
 join betty center
 join fox left
 
-cow: [color=#A8A8A8](with a warm smile)[/color] Mornin', Fox darlin'. How's my favorite barista today? You're lookin' like you could use a strong cup yourself.
+cow: [color=#A8A8A8](with a warm smile)[/color] Mornin', {player.name} darlin'. How's my favorite barista today? You're lookin' like you could use a strong cup yourself.
 
 fox: [color=#A8A8A8](stretching slightly)[/color] Morning, Betty. Yeah, it's one of those days. Just hoping this shift flies by.
 
@@ -40,7 +40,7 @@ cow: [color=#A8A8A8](smiling)[/color] Thanks, darlin'. I'll be back tomorrow for
 
 [color=#A8A8A8](She takes her tea latte and heads for the door.)[/color]
 
-cow: Take care now, Fox. Don't work yourself too hard, ya hear?
+cow: Take care now, {player.name}. Don't work yourself too hard, ya hear?
 
 fox: You too, Betty. See you soon.
 

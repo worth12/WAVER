@@ -10,7 +10,7 @@ cat: [color=#A8A8A8](adjusts tiny blazer)[/color] I see you're admiring my busin
 cat: Today's quarterly temperature assessment requires proper presentation.
 
 cat: [color=#A8A8A8](places tiny thermal thermometer on counter)[/color] Now then...
-cat: I trust you're aware of Regulation 143?
+cat: {player.name}, I trust you're aware of Regulation 143?
 
 - Ask about Regulation 143
 	fox: What's Regulation 143?
