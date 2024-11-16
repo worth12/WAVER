@@ -16,7 +16,6 @@ var score_textures = ["res://Assets/8445903.png", "res://Assets/8445922.png", "r
 
 var try: int = 0
 var running: bool = true
-signal minigame_closed
 
 # Indicator movement
 var indicator_y: float = 0  # Current Y position of the indicator
@@ -24,8 +23,11 @@ var indicator_y: float = 0  # Current Y position of the indicator
 func _ready():
 	# Initialize the starting position of the indicator
 	indicator_y = 0
+	try = 0
+	running = true
 	update_indicator_position()
 	reset_score()
+	$Continue.text = "Press Space To Stop"
 
 func _process(delta):
 	if running:
@@ -42,14 +44,16 @@ func _process(delta):
 		update_indicator_position()
 	else:
 		if Input.is_key_pressed(KEY_E):
-			self.hide()
+			get_parent().hide()
+			_ready()
 
 func update_indicator_position():
 	$Slider/Indicator.position.y = indicator_y
 
 func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		check_hit()
+	if try != 3:
+		if event.is_action_pressed("ui_accept"):
+			check_hit()
 
 func check_hit():
 	# Get the indicator's position
