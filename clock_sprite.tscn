@@ -9,7 +9,7 @@
 script = ExtResource("2_5wqjj")
 seconds = 0
 minutes = 0
-hours = 4
+hours = 8
 days = 0
 
 [node name="Clock Sprite" type="Node2D"]
@@ -30,4 +30,5 @@ ticks_pr_seconds = 600
 [node name="Time GUI" parent="CanvasLayer" instance=ExtResource("3_bpcsh")]
 script = ExtResource("4_22u4e")
 
+[connection signal="updated" from="TimeSystem" to="." method="_on_time_system_updated"]
 [connection signal="updated" from="TimeSystem" to="CanvasLayer/Time GUI" method="_on_time_system_updated"]
