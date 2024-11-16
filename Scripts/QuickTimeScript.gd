@@ -22,9 +22,7 @@ var indicator_y: float = 0  # Current Y position of the indicator
 
 func _ready():
 	# Initialize the starting position of the indicator
-	indicator_y = 0
-	try = 0
-	running = true
+	_resetMinigame()
 	update_indicator_position()
 	reset_score()
 	$Continue.text = "Press Space To Stop"
@@ -44,8 +42,7 @@ func _process(delta):
 		update_indicator_position()
 	else:
 		if Input.is_key_pressed(KEY_E):
-			get_parent().hide()
-			_ready()
+			_close_game()
 
 func update_indicator_position():
 	$Slider/Indicator.position.y = indicator_y
@@ -78,3 +75,12 @@ func reset_score():
 	try = 0
 	for score_box in score_boxes:
 		score_box.texture = null
+
+func _resetMinigame():
+	indicator_y = 0
+	try = 0
+	running = true
+
+func _close_game():
+	get_parent().hide()
+	_ready()

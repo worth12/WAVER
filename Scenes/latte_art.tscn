@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://df1flad2eitct"]
+[gd_scene load_steps=5 format=3 uid="uid://1jqf226l2wmo"]
 
 [ext_resource type="Script" path="res://Scripts/latte_art.gd" id="1_e3hmb"]
 
@@ -108,16 +108,18 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 212.0
-offset_top = 464.0
-offset_right = 712.0
-offset_bottom = 498.0
+offset_left = 696.0
+offset_top = 101.0
+offset_right = 929.0
+offset_bottom = 402.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Trace the pattern to create latte art!"
 horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(947, 518)
