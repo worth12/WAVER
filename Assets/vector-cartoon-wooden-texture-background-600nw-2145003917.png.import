@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cou2v08k0j0wg"
-path="res://.godot/imported/vector-cartoon-wooden-texture-background-600nw-2145003917.png-5da24a678e312663c5b985f72bb2bebd.ctex"
+path="res://.godot/imported/vector-cartoon-wooden-texture-background-600nw-2145003917.png-661e37f2c43bc8c40a2f89fe1516e161.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/vector-cartoon-wooden-texture-background-600nw-2145003917.png"
-dest_files=["res://.godot/imported/vector-cartoon-wooden-texture-background-600nw-2145003917.png-5da24a678e312663c5b985f72bb2bebd.ctex"]
+source_file="res://assets/vector-cartoon-wooden-texture-background-600nw-2145003917.png"
+dest_files=["res://.godot/imported/vector-cartoon-wooden-texture-background-600nw-2145003917.png-661e37f2c43bc8c40a2f89fe1516e161.ctex"]
 
 [params]
 

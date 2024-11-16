@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://u0jqml7awiuv"]
 
 [ext_resource type="Script" path="res://Scripts/Coffee_Pouring_Minigame.gd" id="1_mejo2"]
-[ext_resource type="Texture2D" uid="uid://detip01cpqwrw" path="res://Assets/1386638.png" id="2_pm21e"]
-[ext_resource type="Texture2D" uid="uid://cou2v08k0j0wg" path="res://Assets/vector-cartoon-wooden-texture-background-600nw-2145003917.png" id="2_xc4wm"]
+[ext_resource type="Texture2D" uid="uid://detip01cpqwrw" path="res://assets/1386638.png" id="2_pm21e"]
+[ext_resource type="Texture2D" uid="uid://cou2v08k0j0wg" path="res://assets/vector-cartoon-wooden-texture-background-600nw-2145003917.png" id="2_xc4wm"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,10 +16,10 @@ pourSpeed = 60.0
 
 [node name="Cup" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 296.0
-offset_top = 120.0
-offset_right = 552.0
-offset_bottom = 320.0
+offset_left = 184.0
+offset_top = 168.0
+offset_right = 440.0
+offset_bottom = 368.0
 texture = ExtResource("2_pm21e")
 
 [node name="Coffee" type="ColorRect" parent="Cup"]
@@ -42,10 +42,10 @@ color = Color(0.897064, 0, 0.225493, 1)
 
 [node name="TargetLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 664.0
-offset_top = 88.0
-offset_right = 930.0
-offset_bottom = 175.0
+offset_left = 160.0
+offset_top = 56.0
+offset_right = 426.0
+offset_bottom = 143.0
 
 [node name="ResultLabel" type="Label" parent="."]
 layout_mode = 0
@@ -57,10 +57,10 @@ horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 695.0
-offset_top = 182.0
-offset_right = 896.0
-offset_bottom = 248.0
+offset_left = 528.0
+offset_top = 232.0
+offset_right = 729.0
+offset_bottom = 298.0
 texture = ExtResource("2_xc4wm")
 expand_mode = 3
 stretch_mode = 1
@@ -74,3 +74,6 @@ offset_bottom = 66.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(898.391, 512.399)
