@@ -33,7 +33,7 @@ func _ready():
 	pattern_line.default_color = Color(1, 1, 1, 0.4)
 	
 	player_line.width = 20.0
-	player_line.default_color = Color(0.4, 0.2, 0.1, 1)
+	player_line.default_color = Color(1, 1, 1, 1)
 	
 	game_timer.wait_time = 30.0
 	game_timer.one_shot = true
@@ -43,7 +43,7 @@ func _ready():
 
 func setup_pattern():
 	var center = get_viewport_rect().size / 2
-	var size = 120
+	var size = 150
 	
 	match current_pattern:
 		Patterns.HEART:
