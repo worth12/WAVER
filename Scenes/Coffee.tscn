@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5dug6ks62y2v"]
+[gd_scene load_steps=5 format=3 uid="uid://c5dug6ks62y2v"]
 
 [ext_resource type="Script" path="res://Scripts/Coffee_Pouring_Minigame.gd" id="1_mejo2"]
-[ext_resource type="Texture2D" uid="uid://6fh2532iylep" path="res://Assets/1386638.png" id="2_pm21e"]
-[ext_resource type="Texture2D" uid="uid://y77gf756avay" path="res://Assets/vector-cartoon-wooden-texture-background-600nw-2145003917.png" id="2_xc4wm"]
+[ext_resource type="Texture2D" uid="uid://detip01cpqwrw" path="res://Assets/1386638.png" id="2_pm21e"]
+[ext_resource type="Texture2D" uid="uid://cou2v08k0j0wg" path="res://Assets/vector-cartoon-wooden-texture-background-600nw-2145003917.png" id="2_xc4wm"]
+[ext_resource type="AudioStream" uid="uid://b2x38t8tgforv" path="res://Assets/mixkit-pouring-soda-in-a-glass-2833.wav" id="4_3n0yb"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -103,3 +104,6 @@ vertical_alignment = 1
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(898.391, 512.399)
+
+[node name="soundeffect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3n0yb")
