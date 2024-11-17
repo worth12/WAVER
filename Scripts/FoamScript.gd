@@ -17,7 +17,7 @@ var score_textures = ["res://Assets/8445903.png", "res://Assets/8445922.png", "r
 var try: int = 0
 var running: bool = true
 
-signal minigame_completed
+signal minigame_completed(minigame_name: String, score: int)
 
 var current_score: int = 0
 var attempt_scores: Array = []
@@ -141,7 +141,7 @@ func _resetMinigame():
 
 func _close_game():
 	get_parent().hide()
-	emit_signal("minigame_completed")  # Notify MinigameController
+	emit_signal("minigame_completed", "foam", current_score)  # Notify MinigameController
 	_ready()
 	
 # Called when the window is resized

@@ -42,6 +42,7 @@ directories/dtl_directory={
 "cow2": "res://dialogue/timelines/cow2.dtl",
 "cow3": "res://dialogue/timelines/cow3.dtl",
 "cow4": "res://dialogue/timelines/cow4.dtl",
+"game_ending": "res://dialogue/timelines/game_ending.dtl",
 "initial_setup": "res://dialogue/timelines/initial_setup.dtl",
 "turtle1": "res://dialogue/timelines/turtle1.dtl",
 "turtle2": "res://dialogue/timelines/turtle2.dtl",
@@ -55,7 +56,18 @@ variables={
 "did_negotiate_for_seat": false
 },
 "player": {
-"name": "Fox"
+"name": "Fox",
+"performance": {
+"art_max_score": 0,
+"art_score": 0,
+"foam_max_score": 0,
+"foam_score": 0,
+"performance_percent": 0.0,
+"pouring_max_score": 0,
+"pouring_score": 0,
+"total_max_score": 0,
+"total_score": 0
+}
 }
 }
 extensions_folder="res://addons/dialogic_additions"

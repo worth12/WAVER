@@ -14,7 +14,7 @@ var time_left = 30
 var points_needed_per_segment = 8
 var current_pattern = Patterns.HEART
 
-signal minigame_completed
+signal minigame_completed(minigame_name: String, score: int)
 
 @onready var pattern_line = $PatternLine
 @onready var player_line = $PlayerLine
@@ -225,7 +225,7 @@ func _resetMinigame():
 	
 func _close_game():
 	get_parent().hide()
-	emit_signal("minigame_completed")  # Notify MinigameController
+	emit_signal("minigame_completed", "art", score)  # Notify MinigameController
 	_resetMinigame()
 	_ready()
 	

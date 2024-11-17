@@ -20,9 +20,18 @@ func _ready() -> void:
 		dialogue_manager = dialogue_manager_instance
 	minigame_controller.connect("minigame_completed", Callable(self, "_on_minigame_completed"))
 
-func _on_minigame_completed():
+func _on_minigame_completed(minigame_name: String, score: int):
 	minigame_count += 1
 	print("Minigame completed! Total minigames today: %d" % minigame_count)
+	var scoreId = minigame_name + "_score"
+	var maxScoreId = minigame_name + "_max_score"
+	var performanceFolder = Dialogic.VAR.get("player").get("performance")
+	performanceFolder.set(scoreId, score + performanceFolder.get(scoreId))
+	performanceFolder.set(maxScoreId, 100 + performanceFolder.get(maxScoreId))
+	
+	performanceFolder.set("total_score", score + performanceFolder.get("total_score"))
+	performanceFolder.set("total_max_score", 100 + performanceFolder.get("total_max_score"))
+	performanceFolder.set("performance_percent", 100*performanceFolder.get("total_score")/performanceFolder.get("total_max_score"))
 	
 	if minigame_count == minigames_per_customer:
 		customer_count += 1

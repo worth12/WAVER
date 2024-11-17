@@ -31,7 +31,7 @@ var target_rotation: float = 0.0  # Target rotation angle
 var min_width: float = 6.0  # Width when barely pouring
 var max_width: float = 30.0  # Width when fully tilted
 var min_length: float = 40.0  # Minimum stream length
-signal minigame_completed
+signal minigame_completed(minigame_name: String, score: int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -185,13 +185,18 @@ func _checkCoffeeAmount():
 	# Calculate score based on difference
 	if difference <= margin:
 		# Perfect pour (difference = 0) gets 100 points
-		# Maximum margin difference gets 85 points
-		current_score = int(100 - (difference / margin) * 15)
+		# Maximum margin difference gets 70 points
+		current_score = int(100 - (difference / margin) * 30)
 		resultLabel.text = "Great Job! Nice Pouring!\nScore: %d/100" % current_score
 	else:
-		# Score scales from 84 down to 0 based on how far off they were
-		var score_reduction = min((difference - margin) / (maxCoffeeAmount - margin) * 84, 84)
-		current_score = max(0, int(84 - score_reduction))
+		# Score scales quickly to 0 based on how far off they were
+		# More than 2x margin = automatic 0
+		var max_error = margin * 2
+		if difference > max_error:
+			current_score = 0
+		else:
+			# Score drops rapidly from 69 to 0
+			current_score = int(69 * (1 - (difference - margin) / margin))
 		resultLabel.text = "Needs improvement! Please pour the requested amount of coffee.\nScore: %d/100" % current_score
 	
 	running = false
@@ -210,5 +215,5 @@ func _resetMinigame():
 
 func _close_game():
 	get_parent().hide()
-	emit_signal("minigame_completed", current_score)
+	emit_signal("minigame_completed", "pouring", current_score)
 	_ready()
