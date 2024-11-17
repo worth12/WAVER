@@ -14,7 +14,7 @@ var customer_count: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if not has_node("DialogueManager"):
-		var dialogue_manager_scene = preload("res://scenes/DialogueManager.tscn")
+		var dialogue_manager_scene = preload("res://Scenes/DialogueManager.tscn")
 		var dialogue_manager_instance = dialogue_manager_scene.instantiate()
 		add_child(dialogue_manager_instance)
 		dialogue_manager = dialogue_manager_instance
