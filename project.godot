@@ -92,6 +92,7 @@ save/encryption_on_exports_only=true
 text/autopauses={}
 text/autocolor_names=true
 portraits/default_portrait=""
+text/autoadvance_enabled=false
 
 [display]
 
