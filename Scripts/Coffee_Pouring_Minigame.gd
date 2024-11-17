@@ -3,9 +3,12 @@ extends Control
 # Coffee Minigame variables
 var currentCoffeeAmount: float = 0.0
 var targetCoffeeAmount: float = 0.0 # Will be randomize to be a value between 100 and 140
-var maxCoffeeAmount: float =  180.0
+var maxCoffeeAmount: float = 180.0
 @export var pourSpeed: float = 60.0 # number of mL of coffee poured per second
 @export var margin: float = 10.0 # Acceptable margin of error
+
+# Score tracking
+var current_score: int = 0
 
 # UI Elements
 @onready var targetLabel = $TargetLabel
@@ -175,12 +178,22 @@ func stop_pouring():
 	if currentCoffeeAmount > 0:
 		_checkCoffeeAmount()
 
-# Checks to see if the targeted amount has been properly fulfilled
+# Checks to see if the targeted amount has been properly fulfilled and calculates score
 func _checkCoffeeAmount():
-	if abs(currentCoffeeAmount - targetCoffeeAmount) <= margin:
-		resultLabel.text = "Great Job! Nice Pouring!"
+	var difference = abs(currentCoffeeAmount - targetCoffeeAmount)
+	
+	# Calculate score based on difference
+	if difference <= margin:
+		# Perfect pour (difference = 0) gets 100 points
+		# Maximum margin difference gets 85 points
+		current_score = int(100 - (difference / margin) * 15)
+		resultLabel.text = "Great Job! Nice Pouring!\nScore: %d/100" % current_score
 	else:
-		resultLabel.text = "Ahh. Please pour the requested amount of coffee. Try again!"
+		# Score scales from 84 down to 0 based on how far off they were
+		var score_reduction = min((difference - margin) / (maxCoffeeAmount - margin) * 84, 84)
+		current_score = max(0, int(84 - score_reduction))
+		resultLabel.text = "Needs improvement! Please pour the requested amount of coffee.\nScore: %d/100" % current_score
+	
 	running = false
 	currentLabel.text = "Press E to Continue"
 
@@ -190,11 +203,12 @@ func _resetMinigame():
 	targetCoffeeAmount = randi_range(40, 140)
 	targetLabel.text = "Target: %d mL" % targetCoffeeAmount
 	currentLabel.text = "Current: %.1f mL" % currentCoffeeAmount
+	current_score = 0
 	is_pouring = false
 	target_rotation = 0
 	reset_cup()
 
 func _close_game():
 	get_parent().hide()
-	emit_signal("minigame_completed")  # Notify MinigameController
+	emit_signal("minigame_completed", current_score)
 	_ready()
