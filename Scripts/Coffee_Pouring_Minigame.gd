@@ -3,10 +3,13 @@ extends Control
 # Coffee Minigame variables
 var currentCoffeeAmount: float = 0.0
 var targetCoffeeAmount: float = 0.0 # Will be randomize to be a value between 100 and 140
-var maxCoffeeAmount: float =  180.0
-@onready var soundeffect = $soundeffect
+var maxCoffeeAmount: float = 180.0
+
 @export var pourSpeed: float = 60.0 # number of mL of coffee poured per second
 @export var margin: float = 10.0 # Acceptable margin of error
+
+# Score tracking
+var current_score: int = 0
 
 # UI Elements
 @onready var targetLabel = $TargetLabel
@@ -17,6 +20,7 @@ var maxCoffeeAmount: float =  180.0
 @onready var pourEffect = $CoffeePot/SpoutTip/PourEffect
 @onready var cup = $Cup
 @onready var coffee = $Cup/Coffee
+@onready var soundeffect = $soundeffect
 
 # Rotating parameters
 var running: bool = true
@@ -29,7 +33,7 @@ var target_rotation: float = 0.0  # Target rotation angle
 var min_width: float = 6.0  # Width when barely pouring
 var max_width: float = 30.0  # Width when fully tilted
 var min_length: float = 40.0  # Minimum stream length
-signal minigame_completed
+signal minigame_completed(minigame_name: String, score: int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -186,12 +190,27 @@ func stop_pouring():
 	if currentCoffeeAmount > 0:
 		_checkCoffeeAmount()
 
-# Checks to see if the targeted amount has been properly fulfilled
+# Checks to see if the targeted amount has been properly fulfilled and calculates score
 func _checkCoffeeAmount():
-	if abs(currentCoffeeAmount - targetCoffeeAmount) <= margin:
-		resultLabel.text = "Great Job! Nice Pouring!"
+	var difference = abs(currentCoffeeAmount - targetCoffeeAmount)
+	
+	# Calculate score based on difference
+	if difference <= margin:
+		# Perfect pour (difference = 0) gets 100 points
+		# Maximum margin difference gets 70 points
+		current_score = int(100 - (difference / margin) * 30)
+		resultLabel.text = "Great Job! Nice Pouring!\nScore: %d/100" % current_score
 	else:
-		resultLabel.text = "Ahh. Please pour the requested amount of coffee. Try again!"
+		# Score scales quickly to 0 based on how far off they were
+		# More than 2x margin = automatic 0
+		var max_error = margin * 2
+		if difference > max_error:
+			current_score = 0
+		else:
+			# Score drops rapidly from 69 to 0
+			current_score = int(69 * (1 - (difference - margin) / margin))
+		resultLabel.text = "Needs improvement! Please pour the requested amount of coffee.\nScore: %d/100" % current_score
+	
 	running = false
 	currentLabel.text = "Press E to Continue"
 
@@ -201,11 +220,12 @@ func _resetMinigame():
 	targetCoffeeAmount = randi_range(40, 140)
 	targetLabel.text = "Target: %d mL" % targetCoffeeAmount
 	currentLabel.text = "Current: %.1f mL" % currentCoffeeAmount
+	current_score = 0
 	is_pouring = false
 	target_rotation = 0
 	reset_cup()
 
 func _close_game():
 	get_parent().hide()
-	emit_signal("minigame_completed")  # Notify MinigameController
+	emit_signal("minigame_completed", "pouring", current_score)
 	_ready()

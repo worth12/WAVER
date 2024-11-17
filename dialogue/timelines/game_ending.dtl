@@ -1,0 +1,39 @@
+[background arg="res://Assets/pixel-art-cafe-interior-with-cat-coffee-maker_1282444-99386.png" fade="0.0"]
+[style name="dialogue_style"]
+join cat center
+join fox left
+cat: [color=#A8A8A8](adjusts tie)[/color] {player.name}, I need to discuss something of utmost importance regarding your establishment's quarterly performance metrics.
+cat: [color=#A8A8A8](pulls out tiny calculator)[/color] After careful analysis of your KPIs...
+if {player.performance.performance_percent} >= 80:
+	cat: [color=#A8A8A8](reviewing charts)[/color] Your performance has been... exceptional.
+	cat: [color=#A8A8A8](straightens glasses)[/color] Temperature control\: impeccable. Foam distribution\: optimal. Artistic execution\: beyond standard parameters.
+	fox: Does this mean...
+	cat: [color=#A8A8A8](nods professionally)[/color] Yes. This location will be closing.
+	- What?!
+		fox: [color=#A8A8A8](shocked)[/color] But you just said my performance was exceptional!
+	- But why?
+		fox: [color=#A8A8A8](confused)[/color] I don't understand...
+	cat: [color=#A8A8A8](smug professional smile)[/color] Because, {player.name}, we're relocating to Manhattan.
+	cat: The board was particularly impressed by your 143°F temperature consistency. They've approved an expansion budget of [color=#A8A8A8](checks tiny notepad)[/color] 8.7 million.
+	cat: [color=#A8A8A8](adjusts tiny cufflinks)[/color] You'll be managing our new flagship location. With a proper ergonomic coffee station, of course.
+	fox: [color=#A8A8A8](stunned)[/color] I... I don't know what to say.
+	cat: The correct response is "I accept this promotion with an understanding of proper temperature maintenance protocols."
+	cat: [color=#A8A8A8](hands over business card)[/color] Welcome to the executive team, {player.name}. Your new business cards will arrive in 2-3 business days.
+elif {player.performance.performance_percent} >= 50:
+	cat: [color=#A8A8A8](frowning at spreadsheet)[/color] Your performance has been... concerning.
+	cat: Our temperature variance is 0.7 degrees above acceptable parameters. The foam distribution charts are... disappointing.
+	cat: [color=#A8A8A8](pulls out termination notice)[/color] I regret to inform you that this location will be closing.
+	cat: [color=#A8A8A8](reviewing documentation)[/color] Perhaps with additional training in proper beverage temperature protocols, you might qualify for our strip mall locations.
+	fox: [color=#A8A8A8](dejected)[/color] I understand...
+	cat: [color=#A8A8A8](stamps papers)[/color] Your severance package includes a pocket thermometer. Use it wisely.
+else:
+	cat: [color=#A8A8A8](horrified)[/color] These numbers... they're catastrophic.
+	cat: [color=#A8A8A8](clutches tiny briefcase)[/color] Temperature variances of up to 3 degrees. Foam distributions that violate the Geneva Convention. Latte art that looks like... abstract expressionism.
+	cat: This location isn't just closing. We're legally required to burn it down and salt the earth.
+	fox: That seems a bit extreme...
+	cat: [color=#A8A8A8](pulls out tiny phone)[/color] I have the health department on speed dial. They insisted after seeing your foam density reports.
+	cat: [color=#A8A8A8](straightens tie one last time)[/color] Please exit the building. The hazmat team will handle the rest.
+cat: [color=#A8A8A8](checking watch)[/color] Now if you'll excuse me, I have a 3\:00 PM meeting about proper stapler alignment.
+leave cat
+leave fox
+[end_timeline]

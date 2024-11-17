@@ -8,13 +8,15 @@
 
 [node name="GameController" type="Node2D"]
 script = ExtResource("1_ll7dx")
+customers_per_day = 1
+minigames_per_customer = 1
 
 [node name="Clock" parent="." instance=ExtResource("2_ldjne")]
 scale = Vector2(0.341787, 0.341787)
 steps = 3
 
 [node name="MiniGames" parent="." instance=ExtResource("3_grqhb")]
-position = Vector2(607.279, 335.487)
+position = Vector2(1, 5)
 
 [node name="music" parent="." instance=ExtResource("4_2ddm1")]
 volume_db = -11.886

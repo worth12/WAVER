@@ -19,7 +19,8 @@ var encounter_order = [
 	"bunny3",
 	"turtle3",
 	"cow4",
-	"bunny4"
+	"bunny4",
+	"game_ending"
 ]
 
 func _ready():
