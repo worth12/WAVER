@@ -69,4 +69,3 @@ func autoload_music():
 	if backgroundmusic.stream() and ambiance.stream():
 		backgroundmusic.stream.loop = true
 		ambiance.stream.loop = true
-

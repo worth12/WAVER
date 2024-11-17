@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://ds8pclet6nwtx"]
 
 [ext_resource type="Script" path="res://Scripts/GameController.gd" id="1_ll7dx"]
-[ext_resource type="PackedScene" path="res://Scenes/Clock.tscn" id="2_ldjne"]
+[ext_resource type="PackedScene" uid="uid://b0pbxafl6eysv" path="res://Scenes/Clock.tscn" id="2_ldjne"]
 [ext_resource type="PackedScene" uid="uid://dsf5rb3s7rpwc" path="res://Scenes/MinigameController.tscn" id="3_grqhb"]
-[ext_resource type="PackedScene" uid="uid://b58s5fylidg4k" path="res://background_music.tscn" id="4_2ddm1"]
+[ext_resource type="PackedScene" uid="uid://dbrln4w8aem1e" path="res://background_music.tscn" id="4_2ddm1"]
 [ext_resource type="AudioStream" uid="uid://dcmw3lwclorch" path="res://Assets/mixkit-hotel-restaurant-ambience-and-footsteps-452.wav" id="5_4cvxo"]
 
 [node name="GameController" type="Node2D"]
