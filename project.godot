@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="WAVER"
-run/main_scene="res://Scenes/open minigame.tscn"
+run/main_scene="res://Scenes/GameController.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=60
 config/icon="res://Assets/icon.svg"
@@ -79,6 +79,10 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 text/autocolor_names=true
+
+[display]
+
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 

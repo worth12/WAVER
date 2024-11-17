@@ -17,6 +17,8 @@ var score_textures = ["res://Assets/8445903.png", "res://Assets/8445922.png", "r
 var try: int = 0
 var running: bool = true
 
+signal minigame_completed
+
 # Indicator movement
 var indicator_y: float = 0  # Current Y position of the indicator
 
@@ -85,4 +87,5 @@ func _resetMinigame():
 
 func _close_game():
 	get_parent().hide()
+	emit_signal("minigame_completed")  # Notify MinigameController
 	_ready()

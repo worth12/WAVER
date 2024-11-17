@@ -28,6 +28,7 @@ var target_rotation: float = 0.0  # Target rotation angle
 var min_width: float = 6.0  # Width when barely pouring
 var max_width: float = 30.0  # Width when fully tilted
 var min_length: float = 40.0  # Minimum stream length
+signal minigame_completed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -195,4 +196,5 @@ func _resetMinigame():
 
 func _close_game():
 	get_parent().hide()
+	emit_signal("minigame_completed")  # Notify MinigameController
 	_ready()

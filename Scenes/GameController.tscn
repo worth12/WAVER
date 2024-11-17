@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://50pikdymygij"]
+[gd_scene load_steps=5 format=3 uid="uid://bx34xxarru61s"]
 
-[ext_resource type="Script" path="res://Scripts/GameController.gd" id="1_i3gfb"]
+[ext_resource type="Script" path="res://Scripts/DialogueManager.gd" id="1_amfk2"]
+[ext_resource type="PackedScene" uid="uid://b0pbxafl6eysv" path="res://Scenes/Clock.tscn" id="2_ldjne"]
+[ext_resource type="PackedScene" uid="uid://b88epp7xf5y6u" path="res://Scenes/MinigameController.tscn" id="3_grqhb"]
+[ext_resource type="PackedScene" uid="uid://wji0k4nqucge" path="res://Scenes/DialogueManager.tscn" id="4_pvltk"]
 
 [node name="GameController" type="Node2D"]
-script = ExtResource("1_i3gfb")
+script = ExtResource("1_amfk2")
+
+[node name="Clock" parent="." instance=ExtResource("2_ldjne")]
+scale = Vector2(0.341787, 0.341787)
+steps = 3
+
+[node name="MiniGames" parent="." instance=ExtResource("3_grqhb")]
+position = Vector2(607.279, 335.487)
+
+[node name="DialogueManager" parent="." instance=ExtResource("4_pvltk")]
+
+[connection signal="minigame_completed" from="MiniGames" to="." method="_on_minigame_completed"]

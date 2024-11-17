@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://n1cf2hhb8l6b"]
+[gd_scene load_steps=6 format=3 uid="uid://c8fqxwtuau3br"]
 
-[ext_resource type="Script" path="res://Scripts/QuickTimeScript.gd" id="1_mu70f"]
+[ext_resource type="Script" path="res://Scripts/FoamScript.gd" id="1_k3h84"]
 [ext_resource type="Texture2D" uid="uid://dbv8jxepvpcfn" path="res://Assets/hand-drawn-coffee-background_23-2148051414.jpg" id="2_tppv0"]
 [ext_resource type="Texture2D" uid="uid://d4bydumv5ur4j" path="res://Assets/cute-planner-sticker-png.png" id="3_plnsk"]
 
@@ -12,14 +12,7 @@
 material = SubResource("CanvasItemMaterial_d5ojw")
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_mu70f")
-speed = 150.0
-green_zone_start = 175.0
-green_zone_end = 225.0
-orange_zone_start_1 = 125.0
-orange_zone_end_1 = 174.0
-orange_zone_start_2 = 226.0
-orange_zone_end_2 = 275.0
+script = ExtResource("1_k3h84")
 
 [node name="Slider" type="TextureRect" parent="."]
 z_index = -1
