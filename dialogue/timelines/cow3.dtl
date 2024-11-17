@@ -1,4 +1,4 @@
-[background fade="0.0"]
+[background arg="res://Assets/pixel-art-cafe-interior-with-cat-coffee-maker_1282444-99386.png" fade="0.0"]
 join cow center
 join fox left
 
