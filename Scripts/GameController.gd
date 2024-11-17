@@ -58,3 +58,15 @@ func increment_clock():
 
 func start_dialog():
 	dialogue_manager.force_next_encounter()
+
+#Music by Alex Cook: MUST CREDIT
+func autoload_music():
+	var backgroundmusic = $music
+	var ambiance = $ambiance
+	backgroundmusic.play()
+	ambiance.play()
+	
+	if backgroundmusic.stream() and ambiance.stream():
+		backgroundmusic.stream.loop = true
+		ambiance.stream.loop = true
+

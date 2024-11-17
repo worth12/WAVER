@@ -4,6 +4,7 @@ extends Control
 var currentCoffeeAmount: float = 0.0
 var targetCoffeeAmount: float = 0.0 # Will be randomize to be a value between 100 and 140
 var maxCoffeeAmount: float = 180.0
+
 @export var pourSpeed: float = 60.0 # number of mL of coffee poured per second
 @export var margin: float = 10.0 # Acceptable margin of error
 
@@ -19,6 +20,7 @@ var current_score: int = 0
 @onready var pourEffect = $CoffeePot/SpoutTip/PourEffect
 @onready var cup = $Cup
 @onready var coffee = $Cup/Coffee
+@onready var soundeffect = $soundeffect
 
 # Rotating parameters
 var running: bool = true
@@ -142,10 +144,20 @@ func _process(delta: float):
 		# If coffee is currently being poured, increase the current coffee amount based on pour speed
 		if Input.is_action_pressed("ui_accept") and not is_pouring:
 			start_pouring()
+			
+			# Plays sound effect for coffee pouring.
+			soundeffect.play()
+			
 		elif Input.is_action_pressed("ui_accept") and is_pouring:
 			continue_pouring(delta)
 		elif Input.is_action_just_released("ui_accept") and is_pouring:
 			stop_pouring()
+			
+			#Stops sound effect for coffee pouring.
+			soundeffect.stop()
+			
+			
+		
 			
 		# Smoothly animate the coffee pot rotation
 		if coffeePot:
