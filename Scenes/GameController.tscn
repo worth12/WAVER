@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx34xxarru61s"]
+[gd_scene load_steps=6 format=3 uid="uid://ds8pclet6nwtx"]
 
 [ext_resource type="Script" path="res://Scripts/GameController.gd" id="1_ll7dx"]
 [ext_resource type="PackedScene" uid="uid://b0pbxafl6eysv" path="res://Scenes/Clock.tscn" id="2_ldjne"]
-[ext_resource type="Texture2D" uid="uid://dnmrbyx5uw3ar" path="res://Assets/8445773.png" id="3_61bky"]
-[ext_resource type="PackedScene" uid="uid://b88epp7xf5y6u" path="res://Scenes/MinigameController.tscn" id="3_grqhb"]
-[ext_resource type="Texture2D" uid="uid://djslrdqak0658" path="res://Assets/8445903.png" id="4_ei5ec"]
-[ext_resource type="Texture2D" uid="uid://fqyd07n48tlk" path="res://Assets/8445922.png" id="5_5nmgi"]
+[ext_resource type="PackedScene" uid="uid://dsf5rb3s7rpwc" path="res://Scenes/MinigameController.tscn" id="3_grqhb"]
+[ext_resource type="PackedScene" uid="uid://dbrln4w8aem1e" path="res://background_music.tscn" id="4_2ddm1"]
+[ext_resource type="AudioStream" uid="uid://dcmw3lwclorch" path="res://Assets/mixkit-hotel-restaurant-ambience-and-footsteps-452.wav" id="5_4cvxo"]
 
 [node name="GameController" type="Node2D"]
 script = ExtResource("1_ll7dx")
@@ -22,4 +21,17 @@ t3 = ExtResource("5_5nmgi")
 scale = Vector2(0.341787, 0.341787)
 steps = 3
 
+<<<<<<< HEAD
+=======
+[node name="MiniGames" parent="." instance=ExtResource("3_grqhb")]
+position = Vector2(1, 5)
+
+[node name="music" parent="." instance=ExtResource("4_2ddm1")]
+volume_db = -11.886
+
+[node name="ambiance" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_4cvxo")
+autoplay = true
+
+>>>>>>> fec55218f06ff91ab8a7eee6fd9b61c763c1c267
 [connection signal="minigame_completed" from="MiniGames" to="." method="_on_minigame_completed"]

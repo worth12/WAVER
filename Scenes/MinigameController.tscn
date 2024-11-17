@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b88epp7xf5y6u"]
+[gd_scene load_steps=10 format=3 uid="uid://dsf5rb3s7rpwc"]
 
 [ext_resource type="Script" path="res://Scripts/MinigameController.gd" id="1_rpq62"]
 [ext_resource type="Texture2D" uid="uid://cdt8qyamcbbpw" path="res://Assets/icon.svg" id="2_s2xpp"]
 [ext_resource type="PackedScene" uid="uid://chyrq0d8rbgpm" path="res://Scenes/latte_art.tscn" id="4_2jlyw"]
 [ext_resource type="PackedScene" uid="uid://c8fqxwtuau3br" path="res://Scenes/Foam.tscn" id="4_n0vdr"]
 [ext_resource type="PackedScene" uid="uid://c5dug6ks62y2v" path="res://Scenes/Coffee.tscn" id="4_xa6my"]
+[ext_resource type="AudioStream" uid="uid://b2x38t8tgforv" path="res://Assets/mixkit-pouring-soda-in-a-glass-2833.wav" id="7_46lhn"]
 
 [node name="MiniGames" type="Node2D"]
 script = ExtResource("1_rpq62")
@@ -14,8 +15,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture_normal = ExtResource("2_s2xpp")
 
-[node name="popup1" type="Window" parent="Customer"]
-auto_translate_mode = 1
+[node name="popup" type="Window" parent="latte art"]
 mode = 2
 position = Vector2i(110, 81)
 size = Vector2i(940, 460)
@@ -29,10 +29,7 @@ position = Vector2i(110, 81)
 size = Vector2i(940, 460)
 visible = false
 
-[node name="foam" parent="Customer/popup2" instance=ExtResource("4_n0vdr")]
-
-[node name="popup3" type="Window" parent="Customer"]
-auto_translate_mode = 1
+[node name="popup" type="Window" parent="coffee"]
 mode = 2
 position = Vector2i(110, 81)
 size = Vector2i(940, 460)
@@ -40,6 +37,27 @@ visible = false
 
 [node name="latte" parent="Customer/popup3" instance=ExtResource("4_2jlyw")]
 
-[connection signal="minigame_completed" from="Customer/popup1/coffee" to="." method="_on_minigame_completed"]
-[connection signal="minigame_completed" from="Customer/popup2/foam" to="." method="_on_minigame_completed"]
-[connection signal="minigame_completed" from="Customer/popup3/latte" to="." method="_on_minigame_completed"]
+[node name="CoffeePouring" type="AudioStreamPlayer2D" parent="coffee/popup/Control"]
+position = Vector2(940, 337)
+stream = ExtResource("7_46lhn")
+volume_db = -2.476
+pitch_scale = 3.13
+
+[node name="foam" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(590, 346)
+texture = ExtResource("2_1b2dr")
+script = ExtResource("2_qhdku")
+
+[node name="popup" type="Window" parent="foam"]
+unique_name_in_owner = true
+mode = 2
+position = Vector2i(110, 81)
+size = Vector2i(940, 460)
+visible = false
+
+[node name="Control" parent="foam/popup" instance=ExtResource("4_n0vdr")]
+
+[connection signal="minigame_completed" from="latte art/popup/Control" to="." method="_on_minigame_completed"]
+[connection signal="minigame_completed" from="coffee/popup/Control" to="." method="_on_minigame_completed"]
+[connection signal="minigame_completed" from="foam/popup/Control" to="." method="_on_minigame_completed"]

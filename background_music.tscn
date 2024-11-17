@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbrln4w8aem1e"]
+
+[ext_resource type="AudioStream" uid="uid://tm5qexpye1k4" path="res://Assets/vgm_cozy-shop_9.14.22.mp3" id="1_tsh3y"]
+
+[node name="background music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_tsh3y")
+volume_db = -1.981
+autoplay = true

@@ -41,6 +41,9 @@ func start_next_encounter():
 
 func _on_timeline_ended():
 	dialogic_timeline_started = false
+	if current_encounter_index >= encounter_order.size():
+		print("All encounters completed, transitioning to game over!")
+		get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
 
 	
 func force_next_encounter():
