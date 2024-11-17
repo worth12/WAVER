@@ -24,7 +24,7 @@ var encounter_order = [
 
 func _ready():
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
-	start_next_encounter() # begin initial setup
+	force_next_encounter() # begin initial setup
 
 func start_next_encounter():
 	if current_encounter_index < encounter_order.size():
