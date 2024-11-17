@@ -85,3 +85,12 @@ theme_override_font_sizes/font_size = 60
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(898.391, 512.399)
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 100.0
+offset_right = 576.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 24
+text = "Score: 0"
