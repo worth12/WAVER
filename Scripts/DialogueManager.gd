@@ -3,6 +3,8 @@ extends Node
 var current_encounter_index = 0
 var dialogic_timeline_started = false
 
+@export var auto_skip: bool = true
+
 var encounter_order = [
 	"initial_setup",
 	"cat1",
@@ -25,13 +27,20 @@ var encounter_order = [
 
 func _ready():
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
+	
 	force_next_encounter() # begin initial setup
 
 func start_next_encounter():
 	if current_encounter_index < encounter_order.size():
 		var timeline_name = encounter_order[current_encounter_index]
 		print("Starting timeline: ", timeline_name)
-		
+		if auto_skip:
+			Dialogic.Inputs.auto_skip.enabled = true
+			Dialogic.Choices.block_delay = 0.01
+			Dialogic.Inputs.auto_skip.disable_on_unread_text = false
+			Dialogic.Inputs.auto_skip.disable_on_user_input = false
+			Dialogic.Inputs.auto_skip.time_per_event = 0.0
+			Dialogic.Choices.autofocus_first_choice = true
 		Dialogic.start(timeline_name)
 		dialogic_timeline_started = true
 		

@@ -3,13 +3,12 @@
 [ext_resource type="Script" path="res://Scripts/GameController.gd" id="1_ll7dx"]
 [ext_resource type="PackedScene" uid="uid://b0pbxafl6eysv" path="res://Scenes/Clock.tscn" id="2_ldjne"]
 [ext_resource type="PackedScene" uid="uid://dsf5rb3s7rpwc" path="res://Scenes/MinigameController.tscn" id="3_grqhb"]
-[ext_resource type="PackedScene" uid="uid://dbrln4w8aem1e" path="res://background_music.tscn" id="4_2ddm1"]
+[ext_resource type="PackedScene" uid="uid://dbrln4w8aem1e" path="res://Scenes/background_music.tscn" id="4_2ddm1"]
 [ext_resource type="AudioStream" uid="uid://dcmw3lwclorch" path="res://Assets/mixkit-hotel-restaurant-ambience-and-footsteps-452.wav" id="5_4cvxo"]
 
 [node name="GameController" type="Node2D"]
 script = ExtResource("1_ll7dx")
 customers_per_day = 1
-minigames_per_customer = 1
 
 [node name="Clock" parent="." instance=ExtResource("2_ldjne")]
 scale = Vector2(0.341787, 0.341787)
@@ -24,5 +23,3 @@ volume_db = -11.886
 [node name="ambiance" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_4cvxo")
 autoplay = true
-
-[connection signal="minigame_completed" from="MiniGames" to="." method="_on_minigame_completed"]

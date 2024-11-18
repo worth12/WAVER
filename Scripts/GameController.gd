@@ -18,7 +18,7 @@ func _ready() -> void:
 		var dialogue_manager_instance = dialogue_manager_scene.instantiate()
 		add_child(dialogue_manager_instance)
 		dialogue_manager = dialogue_manager_instance
-	minigame_controller.connect("minigame_completed", Callable(self, "_on_minigame_completed"))
+	minigame_controller.connect("minigame_completed_details", Callable(self, "_on_minigame_completed"))
 
 func _on_minigame_completed(minigame_name: String, score: int):
 	minigame_count += 1

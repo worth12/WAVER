@@ -94,3 +94,9 @@ offset_right = 576.0
 offset_bottom = 140.0
 theme_override_font_sizes/font_size = 24
 text = "Score: 0"
+
+[node name="Background" type="ColorRect" parent="."]
+z_index = -8
+offset_right = 1537.0
+offset_bottom = 865.0
+color = Color(0.658824, 0.521569, 0.415686, 1)

@@ -29,6 +29,7 @@ func _process(_delta):
 	if player_points.size() > 0:
 		if has_drawn && Input.is_key_pressed(KEY_E):
 			_close_game()
+			print("CLosine")
 		else:
 			pass
 

@@ -211,6 +211,7 @@ func start_timeline(timeline:Variant, label_or_idx:Variant = "") -> void:
 	current_timeline = timeline
 	current_timeline_events = current_timeline.events
 	for event in current_timeline_events:
+		event
 		event.dialogic = self
 	current_event_idx = -1
 
