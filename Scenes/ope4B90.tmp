@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://b88epp7xf5y6u"]
+
+[ext_resource type="Script" path="res://Scripts/Node2D.gd" id="1_7cy30"]
+[ext_resource type="Texture2D" uid="uid://dnmrbyx5uw3ar" path="res://Assets/8445773.png" id="2_1b2dr"]
+[ext_resource type="Texture2D" uid="uid://fqyd07n48tlk" path="res://Assets/8445922.png" id="2_atqky"]
+[ext_resource type="Script" path="res://Scripts/Sprite2D.gd" id="2_qhdku"]
+[ext_resource type="Texture2D" uid="uid://djslrdqak0658" path="res://Assets/8445903.png" id="2_wl4v3"]
+[ext_resource type="Script" path="res://Scripts/open_latte_art.gd" id="3_s5gi1"]
+[ext_resource type="PackedScene" path="res://Scenes/latte_art.tscn" id="4_2jlyw"]
+[ext_resource type="PackedScene" uid="uid://c8fqxwtuau3br" path="res://Scenes/QuickTime.tscn" id="4_n0vdr"]
+[ext_resource type="PackedScene" path="res://Scenes/Coffee.tscn" id="4_xa6my"]
+
+[node name="MiniGames" type="Node2D"]
+script = ExtResource("1_7cy30")
+
+[node name="latte art" type="Sprite2D" parent="."]
+position = Vector2(940, 337)
+texture = ExtResource("2_atqky")
+script = ExtResource("3_s5gi1")
+
+[node name="popup" type="Window" parent="latte art"]
+auto_translate_mode = 1
+mode = 2
+position = Vector2i(110, 81)
+size = Vector2i(940, 460)
+visible = false
+
+[node name="LatteArtGame" parent="latte art/popup" instance=ExtResource("4_2jlyw")]
+
+[node name="coffee" type="Sprite2D" parent="."]
+position = Vector2(260, 357)
+texture = ExtResource("2_wl4v3")
+script = ExtResource("2_qhdku")
+
+[node name="popup" type="Window" parent="coffee"]
+auto_translate_mode = 1
+mode = 2
+position = Vector2i(110, 81)
+size = Vector2i(940, 460)
+visible = false
+
+[node name="Control" parent="coffee/popup" instance=ExtResource("4_xa6my")]
+
+[node name="foam" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(590, 346)
+texture = ExtResource("2_1b2dr")
+script = ExtResource("2_qhdku")
+
+[node name="popup" type="Window" parent="foam"]
+unique_name_in_owner = true
+mode = 2
+position = Vector2i(110, 81)
+size = Vector2i(940, 460)
+visible = false
+
+[node name="Control" parent="foam/popup" instance=ExtResource("4_n0vdr")]

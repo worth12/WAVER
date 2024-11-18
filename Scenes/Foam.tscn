@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8fqxwtuau3br"]
+
+[ext_resource type="Script" path="res://Scripts/FoamScript.gd" id="1_k3h84"]
+[ext_resource type="Texture2D" uid="uid://dbv8jxepvpcfn" path="res://Assets/hand-drawn-coffee-background_23-2148051414.jpg" id="2_tppv0"]
+[ext_resource type="Texture2D" uid="uid://d4bydumv5ur4j" path="res://Assets/cute-planner-sticker-png.png" id="3_plnsk"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d5ojw"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0ytbc"]
+
+[node name="Control" type="Control"]
+material = SubResource("CanvasItemMaterial_d5ojw")
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_k3h84")
+
+[node name="Slider" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 96.0
+offset_top = 32.0
+offset_right = 246.0
+offset_bottom = 432.0
+texture = ExtResource("2_tppv0")
+expand_mode = 4
+stretch_mode = 6
+
+[node name="orange_zone_1" type="ColorRect" parent="Slider"]
+layout_mode = 0
+offset_top = 125.0
+offset_right = 150.0
+offset_bottom = 175.0
+color = Color(1, 0.698039, 0, 0.45098)
+
+[node name="orange_zone_2" type="ColorRect" parent="Slider"]
+layout_mode = 0
+offset_top = 225.0
+offset_right = 150.0
+offset_bottom = 275.0
+color = Color(1, 0.698039, 0, 0.45098)
+
+[node name="green_zone" type="ColorRect" parent="Slider"]
+layout_mode = 0
+offset_top = 175.0
+offset_right = 150.0
+offset_bottom = 225.0
+color = Color(0, 0.698039, 0, 0.45098)
+
+[node name="Indicator" type="TextureRect" parent="Slider"]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 20.0
+texture = SubResource("PlaceholderTexture2D_0ytbc")
+expand_mode = 1
+
+[node name="ScoreContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 168.0
+offset_right = 776.0
+offset_bottom = 286.0
+
+[node name="score1" type="TextureRect" parent="ScoreContainer"]
+layout_mode = 2
+texture = ExtResource("3_plnsk")
+expand_mode = 2
+
+[node name="score2" type="TextureRect" parent="ScoreContainer"]
+layout_mode = 2
+texture = ExtResource("3_plnsk")
+expand_mode = 2
+
+[node name="score3" type="TextureRect" parent="ScoreContainer"]
+layout_mode = 2
+texture = ExtResource("3_plnsk")
+expand_mode = 2
+
+[node name="Continue" type="Label" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 344.0
+offset_right = 859.0
+offset_bottom = 427.0
+theme_override_font_sizes/font_size = 60
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(898.391, 512.399)
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 100.0
+offset_right = 576.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 24
+text = "Score: 0"

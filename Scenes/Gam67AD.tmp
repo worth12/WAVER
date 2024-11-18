@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bx34xxarru61s"]
+
+[ext_resource type="Script" path="res://Scripts/GameController.gd" id="1_i3gfb"]
+[ext_resource type="PackedScene" path="res://Scenes/Clock.tscn" id="2_ldjne"]
+[ext_resource type="PackedScene" uid="uid://b88epp7xf5y6u" path="res://Scenes/MinigameController.tscn" id="3_grqhb"]
+
+[node name="GameController" type="Node2D"]
+script = ExtResource("1_i3gfb")
+
+[node name="Clock Sprite" parent="." instance=ExtResource("2_ldjne")]
+position = Vector2(-1, 2)
+scale = Vector2(0.353239, 0.353239)
+
+[node name="MiniGames" parent="." instance=ExtResource("3_grqhb")]

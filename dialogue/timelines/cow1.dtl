@@ -1,0 +1,50 @@
+[background arg="res://Assets/pixel-art-cafe-interior-with-cat-coffee-maker_1282444-99386.png" fade="0.0"]
+[style name="dialogue_style"]
+join betty center
+join fox left
+
+cow: [color=#A8A8A8](with a warm smile)[/color] Mornin', {player.name} darlin'. How's my favorite barista today? You're lookin' like you could use a strong cup yourself.
+
+fox: [color=#A8A8A8](stretching slightly)[/color] Morning, Betty. Yeah, it's one of those days. Just hoping this shift flies by.
+
+cow: [color=#A8A8A8](chuckling)[/color] Bless your heart. Mornin' shifts ain't for the faint of spirit, are they? But don't you fret, sugar, you're holdin' up just fine.
+
+- You're my charm!
+	fox: [color=#A8A8A8](lighthearted)[/color] Thanks, Betty. Maybe you're my lucky charm today.
+- Let me nap!
+	fox: [color=#A8A8A8](teasing)[/color] Sure, if you can work the register while I sneak in a nap.
+
+cow: [color=#A8A8A8](grinning)[/color] Oh, now, you know I'd charm the pants off any customer, but my register days are long behind me. Now, what you got brewin' today that'll tickle my fancy?
+
+fox: Same as always—your usual tea latte? Or are you feeling adventurous?
+
+cow: Oh, stick with my tea latte, darlin'. It's reliable, like me. Speaking of which, how'd that milk delivery turn out? Smooth as butter, wasn't it?
+
+- Is it local?
+	fox: [color=#A8A8A8](curious)[/color] Yeah, where do you even find milk that good? Is it local?
+- Good quality milk.
+	fox: [color=#A8A8A8](nonchalant)[/color] You've got a knack for quality, Betty. We can always count on you.
+
+cow: [color=#A8A8A8](with pride)[/color] My suppliers are the best, sugar. Hardworkin' young ladies who've got grit and determination. I give 'em a fair shot when life's got 'em down—it's a real win-win.
+
+- How does it work?
+	fox: [color=#A8A8A8](intrigued)[/color] That's nice of you, but how does that work exactly?
+- Milk empire
+	fox: [color=#A8A8A8](joking)[/color] Sounds like you're running a little milk empire there, Betty.
+
+cow: [color=#A8A8A8](laughing lightly)[/color] An empire? Lordy, no! Just doin' my part to help out while keepin' the milk flowin'. Now, how 'bout that tea latte?
+
+fox: I'll get that ready for you, Betty.
+
+cow: [color=#A8A8A8](smiling)[/color] Thanks, darlin'. I'll be back tomorrow for more of your charm and that good milk.
+
+[color=#A8A8A8](She takes her tea latte and heads for the door.)[/color]
+
+cow: Take care now, {player.name}. Don't work yourself too hard, ya hear?
+
+fox: You too, Betty. See you soon.
+
+[color=#A8A8A8](She exits, leaving the café quietly.)[/color]
+
+leave betty
+leave fox

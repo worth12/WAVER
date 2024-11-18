@@ -1,0 +1,42 @@
+[background arg="res://Assets/pixel-art-cafe-interior-with-cat-coffee-maker_1282444-99386.png" fade="0.0"]
+join cat center
+join fox left
+
+[color=#A8A8A8](The coffee shop is in chaos - papers flying, customers ducking under tables, sirens wailing outside.)[/color]
+
+cat: [color=#A8A8A8](organizing papers, completely calm)[/color] Now {player.name}, about our Proper Coffee Etiquette Seminar...
+
+[color=#A8A8A8](Several masked figures burst through the door, brandishing suspicious coffee thermometers.)[/color]
+
+cat: [color=#A8A8A8](checking schedule)[/color] Unauthorized chaos is not on today's agenda.
+
+- Try to warn Mittens
+	fox: Mittens, I really think you should look up from your papers!
+	cat: Please {player.name}, I'm in the middle of my presentation preparation.
+- Let events unfold
+	fox: [color=#A8A8A8](watches in amazement)[/color] ...
+	cat: [color=#A8A8A8](begins setting up tiny projector)[/color] Now then...
+
+cat: As outlined in section 7.3 of my presentation...
+
+[color=#A8A8A8](As Mittens methodically sets up her presentation, her perfectly timed movements somehow manage to thwart every villain's attempt to cause trouble - dodging a coffee splash while reaching for her pointer, blocking the door while adjusting her tie, tripping criminals while organizing her papers.)[/color]
+
+cat: [color=#A8A8A8](straightening tie)[/color] Did you really think I achieved "Employee of the Month" at Whiskers & Associates through luck alone?
+cat: [color=#A8A8A8](serious)[/color] Chaos prevention through proper coffee appreciation is standard corporate procedure.
+
+cat: [color=#A8A8A8](presents tiny certificate)[/color] For excellence in beverage service under pressure.
+
+- Accept the award
+	fox: [color=#A8A8A8](accepts certificate formally)[/color] Thank you, Mittens.
+	cat: [color=#A8A8A8](professional purr)[/color] The committee will be pleased.
+- Ask about her secret
+	fox: How did you do all this?
+	cat: [color=#A8A8A8](winks professionally)[/color] Sometimes the best way to fight chaos...
+	cat: [color=#A8A8A8](serious)[/color] Is with properly scheduled coffee breaks.
+
+[color=#A8A8A8](The authorities arrive to collect the incapacitated villains.)[/color]
+
+cat: Now then, about next quarter's coffee temperature optimization plans...
+
+leave cat
+leave fox

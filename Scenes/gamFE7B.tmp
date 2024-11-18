@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2x0n7sow7v8j"]
+
+[ext_resource type="PackedScene" uid="uid://dqjs3ucmfwqms" path="res://Scenes/open minigame.tscn" id="2_u40gj"]
+[ext_resource type="PackedScene" uid="uid://fiavc4ip8pqy" path="res://Scenes/Clock.tscn" id="3_uspo2"]
+
+[node name="GameController" type="Node2D"]
+
+[node name="MiniGames" parent="." instance=ExtResource("2_u40gj")]
+position = Vector2(0, 1)
+
+[node name="Clock Sprite" parent="." instance=ExtResource("3_uspo2")]
+z_index = -1
+position = Vector2(7.62939e-06, 2)
+scale = Vector2(0.315408, 0.315408)

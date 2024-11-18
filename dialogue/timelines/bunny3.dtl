@@ -1,0 +1,20 @@
+[background arg="res://Assets/pixel-art-cafe-interior-with-cat-coffee-maker_1282444-99386.png" fade="0.0"]
+[style name="dialogue_style"]
+join bunny center
+join fox left
+fox: [color=#A8A8A8](cheerful)[/color] Howdy, Bonnie, How's the situation with your husband coming along?
+bunny: [color=#A8A8A8](breaks down into tears)[/color] I can't take it anymore. I just found out he got fired from his job. Apparently, he has been having an affair during the past few months with his secretary.
+- That's awful...
+	fox: [color=#A8A8A8](apologetic)[/color] Oh...I see. That is awful Bonnie.
+- Damn.
+	fox: [color=#A8A8A8](blunt)[/color] Damn.
+bunny: I don't know what to do, Fox. Money was already tight before the bastard got fired and I got two hundred and seventeen mouths to take care of. My kids haven't eaten in days.
+fox: [color=#A8A8A8](nodding)[/color] The economy is rough right now. Do you need anything, Bonnie?
+bunny: [color=#A8A8A8](quietly)[/color] I don't think I can ever forgive my husband. Tell me what to do, Fox.
+- Follow your heart
+	fox: [color=#A8A8A8](nodding)[/color] Whenever I'm put in a difficult position, I always remember a piece of advice my mother gave me. Do what the heart says.
+- Do what needs to be done
+	fox: [color=#A8A8A8](solemnly)[/color] Do whatever needs to be done, Bonnie.
+bunny: [color=#A8A8A8](enlightened)[/color] I see...it all makes sense now. Thank you, {player.name}.
+leave bunny
+leave fox

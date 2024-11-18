@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0pbxafl6eysv"]
+
+[ext_resource type="Texture2D" uid="uid://dqp86mkqw6yc3" path="res://Assets/clockFace.png" id="1_iahtn"]
+[ext_resource type="Script" path="res://Scripts/clock.gd" id="1_jcf73"]
+[ext_resource type="Texture2D" uid="uid://bdqohh7ucfgf8" path="res://Assets/smallHand.png" id="2_nlwuo"]
+[ext_resource type="Texture2D" uid="uid://cv811lff6pc4w" path="res://Assets/bigHand.png" id="3_t3wsr"]
+
+[node name="Clock" type="Node2D"]
+script = ExtResource("1_jcf73")
+
+[node name="ClockFace" type="Sprite2D" parent="."]
+position = Vector2(384, 384)
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("1_iahtn")
+
+[node name="HourHand" type="Sprite2D" parent="."]
+position = Vector2(384, 384)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_nlwuo")
+offset = Vector2(0, -110)
+
+[node name="MinuteHand" type="Sprite2D" parent="."]
+position = Vector2(384, 384)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_t3wsr")
+offset = Vector2(0, -155)

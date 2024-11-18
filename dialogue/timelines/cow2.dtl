@@ -1,0 +1,35 @@
+[background arg="res://Assets/pixel-art-cafe-interior-with-cat-coffee-maker_1282444-99386.png" fade="0.0"]
+join betty center
+join fox left
+fox: [color=#A8A8A8](wiping down the counter, cautiously)[/color] Hey, Betty. Got a minute?
+cow: [color=#A8A8A8](setting her teacup down)[/color] Always for you, sweetpea. What's rattlin' around in that head of yours?
+fox: [color=#A8A8A8](hesitant)[/color] I was reading something earlier—about farms, you know, using laborers in tough spots. It got me wondering… how does your milk business work?
+cow: [color=#A8A8A8](with a soft smile)[/color] Oh, sugar, you've got a curious mind, don't you? My girls come to me when they're in a pinch—some debt, some hard times—and I give 'em a hand up. A roof, good food, and honest work.
+
+- They can leave, right?
+	fox: [color=#A8A8A8](concerned)[/color] But they're free to leave if they want to, right?
+- That sounds… helpful…
+	fox: [color=#A8A8A8](neutral)[/color] That sounds… helpful, I guess.
+
+cow: Well, they've got debts to work off, darlin'. But I make sure they're treated fair. Better than what some others would do, that's for sure.
+
+- What happens if they can't pay it off?
+	fox: [color=#A8A8A8](pressing)[/color] What happens if they can't pay it off? Do they get stuck?
+- As long as they're treated well
+	fox: [color=#A8A8A8](reluctant to push)[/color] As long as they're treated well, that's something.
+
+cow: [color=#A8A8A8](leaning in slightly)[/color] {player.name}, you've got a good heart, but you've gotta understand—life ain't always kind. I give 'em a chance when no one else will. That counts for somethin', don't it?
+
+- There's a better way
+	fox: [color=#A8A8A8](gently)[/color] It does, but I can't help feeling like there's a better way.
+- I don't know
+	fox: [color=#A8A8A8](thoughtfully)[/color] I guess I don't know what I'd do in your shoes.
+
+cow: [color=#A8A8A8](smiling softly)[/color] Well, darlin', let's hope you never have to find out.
+fox: I hope not, Betty.
+cow: [color=#A8A8A8](standing up and grabbing her purse)[/color] Alright, I've kept you long enough. Take care, {player.name}. You're a good kid—don't let the world get to ya too much.
+[color=#A8A8A8](She heads toward the door.)[/color]
+fox: See you tomorrow, Betty.
+[color=#A8A8A8](She exits, the door chimes softly as it closes behind her.)[/color]
+leave betty
+leave fox

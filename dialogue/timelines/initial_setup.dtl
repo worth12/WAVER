@@ -1,0 +1,42 @@
+[background arg="res://Assets/pixel-art-cafe-interior-with-cat-coffee-maker_1282444-99386.png" fade="0.0"]
+[style name="dialogue_style"]
+join fox center
+
+Another day begins at your small-town coffee shop. You've only been running it for a few months, but you've already gotten to know your regular customers quite well.
+
+[text_input text="What is your name?" var="player.name" placeholder="First Name" default="Fox"]
+
+There's Mittens, a corporate cat who takes her coffee temperature extremely seriously - right down to the exact degree.
+
+join cat left
+cat: [color=#A8A8A8](adjusts tiny tie)[/color] The optimal coffee temperature is precisely 143°F. I have spreadsheets to prove it.
+leave cat
+
+Then there's Betty, a kind-hearted cow who supplies the shop's milk. Though lately, something about her business seems... concerning.
+
+join cow left
+cow: [color=#A8A8A8](warm smile)[/color] Mornin' sugar! Just deliverin' your daily milk supply.
+leave betty
+
+Bonnie, a rabbit who's always chatting about her large family. She's been having some marriage troubles lately.
+
+join bunny left
+bunny: [color=#A8A8A8](sighing)[/color] Two hundred and seventeen kids to feed...
+leave bunny
+
+And Shelly, a young turtle who recently started visiting. She seems sweet, if perhaps a bit naive.
+
+join turtle left
+turtle: [color=#A8A8A8](excited)[/color] Love is just so wonderful, isn't it?
+leave turtle
+
+fox: [color=#A8A8A8](to self)[/color] Time to open up shop. These drinks won't make themselves!
+
+As a barista, you'll need to master three key skills:
+- Pouring the perfect amount of coffee
+- Creating the right foam consistency
+- Making beautiful latte art
+
+fox: [color=#A8A8A8](determined)[/color] Let's make this coffee shop the best it can be!
+
+leave fox

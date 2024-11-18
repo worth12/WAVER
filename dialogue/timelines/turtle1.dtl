@@ -1,0 +1,24 @@
+[background arg="res://Assets/pixel-art-cafe-interior-with-cat-coffee-maker_1282444-99386.png" fade="0.0"]
+[style name="dialogue_style"]
+join turtle center
+join fox left
+
+fox: [color=#A8A8A8](cheerful)[/color] Howdy, Shelly. How's life treating you?
+
+turtle: [color=#A8A8A8](smiling)[/color] Life is fantastic. I got a new boyfriend recently and he treats me just right.
+
+- Who's the lucky man?
+	fox: [color=#A8A8A8](curious)[/color] That's lovely. Who's the lucky man, Shelly? Do I know him?
+- Whoo hoo!
+	fox: [color=#A8A8A8](whistling)[/color] Whoo hoo!
+
+turtle: [color=#A8A8A8](smiling still)[/color] I can't tell you who he is, but I think he is the love of my life, {player.name}.
+
+fox: [color=#A8A8A8](joking)[/color] That is amazing to hear, Shelly. So when's the wedding?
+
+turtle: [color=#A8A8A8](pondering)[/color] Hopefully soon. It has only been less than half a year, but time waits for no one. You have to take chances when you are young, right? Cya, {player.name}.
+
+fox: Goodbye, Shelly. Thanks for stopping by!
+
+leave turtle
+leave fox

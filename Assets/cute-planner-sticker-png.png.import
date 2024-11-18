@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1bwo58fmeotm"
-path="res://.godot/imported/cute-planner-sticker-png.png-053e9600851f732a493e5055c0e077a3.ctex"
+uid="uid://d4bydumv5ur4j"
+path="res://.godot/imported/cute-planner-sticker-png.png-3690a7f0a5105b5f59f6759604a42091.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cute-planner-sticker-png.png"
-dest_files=["res://.godot/imported/cute-planner-sticker-png.png-053e9600851f732a493e5055c0e077a3.ctex"]
+source_file="res://Assets/cute-planner-sticker-png.png"
+dest_files=["res://.godot/imported/cute-planner-sticker-png.png-3690a7f0a5105b5f59f6759604a42091.ctex"]
 
 [params]
 

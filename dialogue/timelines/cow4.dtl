@@ -1,0 +1,27 @@
+[background arg="res://Assets/pixel-art-cafe-interior-with-cat-coffee-maker_1282444-99386.png" fade="0.0"]
+join cow center
+join fox left
+
+cow: Fox, darlin', somethin's eatin' at you. What's the matter?
+fox: [color=#A8A8A8](hesitant)[/color] Betty, I've been thinking about your milk… and the workers behind it.
+cow: [color=#A8A8A8](frowning slightly)[/color] What about 'em? You got somethin' to say, sugar, just come on out with it.
+
+- Doesn't feel right
+	fox: [color=#A8A8A8](carefully)[/color] I just don't know if I feel right about it anymore.
+- Stop using it
+	fox: [color=#A8A8A8](bluntly)[/color] I don't think I can keep using it, Betty.
+
+cow: [color=#A8A8A8](taken aback)[/color] You'd stop buyin' from me? After all I've done for this place? You know I've got mouths to feed too, Fox.
+
+- Not about you
+	fox: [color=#A8A8A8](gently)[/color] It's not about you, Betty. It's about what feels right.
+- Can't ignore
+	fox: [color=#A8A8A8](resolute)[/color] I'm sorry, but I can't ignore this anymore.
+
+cow: [color=#A8A8A8](after a long pause, her voice softer)[/color] Well, darlin', I'll think on what you've said. That's all I can promise.
+[color=#A8A8A8](She stands up and puts on her coat)[/color]
+cow: You take care of yourself, {player.name}. I'll be back for that milk next week. Maybe we'll talk more then.
+fox: [color=#A8A8A8](nodding)[/color] I hope you do, Betty. Take care.
+[color=#A8A8A8](Betty heads out the door, leaving {player.name} to contemplate the weight of their conversation.)[/color]
+leave cow
+leave fox

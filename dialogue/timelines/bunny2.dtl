@@ -1,0 +1,26 @@
+[background arg="res://Assets/pixel-art-cafe-interior-with-cat-coffee-maker_1282444-99386.png" fade="0.0"]
+[style name="dialogue_style"]
+join bunny center
+join fox left
+
+fox: [color=#A8A8A8](cheerful)[/color] Howdy, Bonnie, How's the family doing?
+
+bunny: [color=#A8A8A8](muttering)[/color] The family is doing fine. It's just...it's just...
+
+fox: [color=#A8A8A8](curious)[/color] It's just what?
+
+bunny: [color=#A8A8A8](sighing)[/color] I had a big fight with my husband last night. I don't know what to do, {player.name}.
+
+- What happened?
+	fox: [color=#A8A8A8](apologetic)[/color] I'm sorry to hear that. What happened?
+- That's crazy
+	fox: [color=#A8A8A8](stunned)[/color] Wow, that's crazy.
+
+bunny: He wants more kids. I told him that this time would be the last time...and that the time before that would be the last... My husband is never satisfied.
+
+fox: [color=#A8A8A8](sympathetic)[/color] I cannot even imagine being in your shoes. I hope everything works out in the end, Bonnie.
+
+bunny: That means a lot to me, {player.name}, and thanks for listening to me. I just needed someone to talk to. See you another time.
+
+leave bunny
+leave fox
